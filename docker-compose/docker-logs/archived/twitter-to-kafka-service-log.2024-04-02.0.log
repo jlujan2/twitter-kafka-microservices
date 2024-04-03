@@ -1,0 +1,1073 @@
+2024-04-02 22:27:04 [main] INFO  c.j.m.t.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication v0.0.1-SNAPSHOT using Java 17.0.10 with PID 1 (/workspace/BOOT-INF/classes started by cnb in /workspace)
+2024-04-02 22:27:04 [main] INFO  c.j.m.t.TwitterToKafkaServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2024-04-02 22:27:09 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	auto.include.jmx.reporter = true
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	client.dns.lookup = use_all_dns_ips
+	client.id = 
+	connections.max.idle.ms = 300000
+	default.api.timeout.ms = 60000
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+
+2024-04-02 22:27:10 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.6.1
+2024-04-02 22:27:10 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 5e3c2b738d253ff5
+2024-04-02 22:27:10 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1712096830328
+2024-04-02 22:27:10 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -3 disconnected.
+2024-04-02 22:27:10 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.21.0.5:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:10 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -2 disconnected.
+2024-04-02 22:27:10 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.21.0.6:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:10 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2024-04-02 22:27:10 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.21.0.3:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:10 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -3 disconnected.
+2024-04-02 22:27:10 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.21.0.5:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:10 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -2 disconnected.
+2024-04-02 22:27:10 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.21.0.6:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:10 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2024-04-02 22:27:10 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.21.0.3:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:10 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -3 disconnected.
+2024-04-02 22:27:10 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.21.0.5:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:10 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -2 disconnected.
+2024-04-02 22:27:10 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.21.0.6:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:10 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2024-04-02 22:27:10 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.21.0.3:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:10 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -3 disconnected.
+2024-04-02 22:27:11 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.21.0.5:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:11 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -2 disconnected.
+2024-04-02 22:27:11 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.21.0.6:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:11 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2024-04-02 22:27:11 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.21.0.3:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:11 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -3 disconnected.
+2024-04-02 22:27:11 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.21.0.5:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:11 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -2 disconnected.
+2024-04-02 22:27:11 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.21.0.6:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:11 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2024-04-02 22:27:11 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.21.0.3:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:12 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -3 disconnected.
+2024-04-02 22:27:12 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.21.0.5:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:12 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -2 disconnected.
+2024-04-02 22:27:12 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.21.0.6:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:12 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2024-04-02 22:27:12 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.21.0.3:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:13 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -3 disconnected.
+2024-04-02 22:27:13 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.21.0.5:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:13 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -2 disconnected.
+2024-04-02 22:27:13 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.21.0.6:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:13 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080
+2024-04-02 22:27:13 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2024-04-02 22:27:13 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.21.0.3:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:13 [main] INFO  c.j.m.t.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 11.223 seconds (process running for 13.536)
+2024-04-02 22:27:13 [main] INFO  c.j.m.t.TwitterToKafkaServiceApplication - App starts...
+2024-04-02 22:27:13 [main] INFO  c.j.m.k.a.client.KafkaAdminClients - Creating 1 topic(s), attempt 0
+2024-04-02 22:27:13 [main] INFO  c.j.m.k.a.client.KafkaAdminClients - Create topic result {twitter-topic=KafkaFuture{value=null,exception=null,done=false}}
+2024-04-02 22:27:13 [main] INFO  c.j.m.k.a.client.KafkaAdminClients - Reading kafka topic [twitter-topic], attempt 0
+2024-04-02 22:27:14 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -3 disconnected.
+2024-04-02 22:27:14 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.21.0.5:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:14 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -2 disconnected.
+2024-04-02 22:27:14 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.21.0.6:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:14 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2024-04-02 22:27:14 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.21.0.3:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:15 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -3 disconnected.
+2024-04-02 22:27:15 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.21.0.5:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:15 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -2 disconnected.
+2024-04-02 22:27:15 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.21.0.6:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:15 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2024-04-02 22:27:15 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.21.0.3:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:16 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -3 disconnected.
+2024-04-02 22:27:16 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.21.0.5:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:16 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -2 disconnected.
+2024-04-02 22:27:16 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.21.0.6:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:16 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2024-04-02 22:27:16 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.21.0.3:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:17 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -3 disconnected.
+2024-04-02 22:27:17 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.21.0.5:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:17 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -2 disconnected.
+2024-04-02 22:27:17 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.21.0.6:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:17 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2024-04-02 22:27:17 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.21.0.3:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:18 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -2 disconnected.
+2024-04-02 22:27:18 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.21.0.6:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:18 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -3 disconnected.
+2024-04-02 22:27:18 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.21.0.5:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:19 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2024-04-02 22:27:19 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.21.0.3:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:19 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -2 disconnected.
+2024-04-02 22:27:19 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.21.0.6:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:19 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -3 disconnected.
+2024-04-02 22:27:19 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.21.0.5:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:20 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -1 disconnected.
+2024-04-02 22:27:20 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.21.0.3:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:20 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -3 disconnected.
+2024-04-02 22:27:20 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.21.0.5:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:20 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -2 disconnected.
+2024-04-02 22:27:20 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.21.0.6:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:21 [kafka-admin-client-thread | adminclient-1] INFO  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Node -3 disconnected.
+2024-04-02 22:27:21 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.21.0.5:9092) could not be established. Broker may not be available.
+2024-04-02 22:27:41 [main] INFO  c.j.m.t.i.i.KafkaStreamInitializer - Topics with name twitter-topic is ready for operations!
+2024-04-02 22:27:41 [main] INFO  c.j.m.t.r.impl.MockKafkaStreamRunner - Starting mock filtering stream for keywords [Java, Microservices, Spring, Kafka, Elasticsearch]
+2024-04-02 22:27:42 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit dolor dolor Lorem  Lorem  dolor Lorem  Microservices amet, Lorem  amet, amet, ipsum
+2024-04-02 22:27:42 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 130262121770782390, "id": 907590805695408812, "text": "sit dolor dolor Lorem  Lorem  dolor Lorem  Microservices amet, Lorem  amet, amet, ipsum", "createdAt": 1712096861000}' to topic='twitter-topic'
+2024-04-02 22:27:42 [pool-4-thread-1] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 1638400
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = snappy
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.LongSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 60000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class io.confluent.kafka.serializers.KafkaAvroSerializer
+
+2024-04-02 22:27:42 [pool-4-thread-1] INFO  i.c.k.s.KafkaAvroSerializerConfig - KafkaAvroSerializerConfig values: 
+	bearer.auth.token = [hidden]
+	schema.registry.url = [http://schema-registry:8081]
+	basic.auth.user.info = [hidden]
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2024-04-02 22:27:42 [pool-4-thread-1] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Instantiated an idempotent producer.
+2024-04-02 22:27:42 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.6.1
+2024-04-02 22:27:42 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 5e3c2b738d253ff5
+2024-04-02 22:27:42 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1712096862431
+2024-04-02 22:27:42 [kafka-producer-network-thread | producer-1] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-1] Cluster ID: N12cirbeTD-soLVEQtE1yA
+2024-04-02 22:27:42 [kafka-producer-network-thread | producer-1] INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-1] ProducerId set to 14000 with epoch 0
+2024-04-02 22:27:43 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 24; Timestamp 1712096862494, at time 63810730446452
+2024-04-02 22:27:44 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor sit ipsum dolor dolor Lorem  sit Microservices ipsum amet, dolor sit dolor
+2024-04-02 22:27:44 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 1837155732685415944, "id": 3684007784325455172, "text": "dolor sit ipsum dolor dolor Lorem  sit Microservices ipsum amet, dolor sit dolor", "createdAt": 1712096864000}' to topic='twitter-topic'
+2024-04-02 22:27:44 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 14; Timestamp 1712096864639, at time 63811530975794
+2024-04-02 22:27:45 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit dolor dolor dolor ipsum Lorem  Java amet, amet, amet, ipsum
+2024-04-02 22:27:45 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 4012975189650720772, "id": 4335080259312891345, "text": "sit dolor dolor dolor ipsum Lorem  Java amet, amet, amet, ipsum", "createdAt": 1712096865000}' to topic='twitter-topic'
+2024-04-02 22:27:45 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 15; Timestamp 1712096865642, at time 63812412014801
+2024-04-02 22:27:46 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, Lorem  amet, Kafka ipsum dolor
+2024-04-02 22:27:46 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 767791185161058600, "id": 7431879129095163037, "text": "amet, Lorem  amet, Kafka ipsum dolor", "createdAt": 1712096866000}' to topic='twitter-topic'
+2024-04-02 22:27:46 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 16; Timestamp 1712096866645, at time 63813418047430
+2024-04-02 22:27:47 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum amet, Lorem  ipsum ipsum Lorem  Lorem  Microservices ipsum Lorem  Lorem  ipsum dolor
+2024-04-02 22:27:47 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 1799754690492547448, "id": 3985926191760981452, "text": "ipsum amet, Lorem  ipsum ipsum Lorem  Lorem  Microservices ipsum Lorem  Lorem  ipsum dolor", "createdAt": 1712096867000}' to topic='twitter-topic'
+2024-04-02 22:27:47 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 17; Timestamp 1712096867650, at time 63814428780866
+2024-04-02 22:27:48 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit sit sit dolor Kafka ipsum ipsum
+2024-04-02 22:27:48 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5895447737688433309, "id": 112526854573897928, "text": "sit sit sit dolor Kafka ipsum ipsum", "createdAt": 1712096868000}' to topic='twitter-topic'
+2024-04-02 22:27:48 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 25; Timestamp 1712096868652, at time 63815423189632
+2024-04-02 22:27:49 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, amet, amet, amet, amet, dolor Elasticsearch sit Lorem  amet, sit
+2024-04-02 22:27:49 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 328576613812330883, "id": 2171785452678441182, "text": "amet, amet, amet, amet, amet, dolor Elasticsearch sit Lorem  amet, sit", "createdAt": 1712096869000}' to topic='twitter-topic'
+2024-04-02 22:27:49 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 18; Timestamp 1712096869655, at time 63816428281955
+2024-04-02 22:27:50 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit ipsum ipsum dolor sit dolor Lorem  amet, Spring sit Lorem  ipsum Lorem  ipsum Lorem  sit
+2024-04-02 22:27:50 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5529492221542622400, "id": 7706784076805257021, "text": "sit ipsum ipsum dolor sit dolor Lorem  amet, Spring sit Lorem  ipsum Lorem  ipsum Lorem  sit", "createdAt": 1712096870000}' to topic='twitter-topic'
+2024-04-02 22:27:50 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 26; Timestamp 1712096870657, at time 63817424305697
+2024-04-02 22:27:51 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, sit ipsum Lorem  ipsum sit ipsum amet, Java Lorem  dolor amet, amet, sit sit sit
+2024-04-02 22:27:51 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5594581213403256052, "id": 7479515706164959643, "text": "amet, sit ipsum Lorem  ipsum sit ipsum amet, Java Lorem  dolor amet, amet, sit sit sit", "createdAt": 1712096871000}' to topic='twitter-topic'
+2024-04-02 22:27:51 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 27; Timestamp 1712096871660, at time 63818426006290
+2024-04-02 22:27:52 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum dolor ipsum amet, dolor amet, Spring Lorem  amet, amet, dolor sit
+2024-04-02 22:27:52 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 9033703479875720120, "id": 5326788281100565420, "text": "ipsum dolor ipsum amet, dolor amet, Spring Lorem  amet, amet, dolor sit", "createdAt": 1712096872000}' to topic='twitter-topic'
+2024-04-02 22:27:52 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 28; Timestamp 1712096872662, at time 63819426644173
+2024-04-02 22:27:53 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum amet, sit sit dolor Java amet, dolor ipsum amet,
+2024-04-02 22:27:53 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5679784660131858795, "id": 8927351904241306066, "text": "ipsum amet, sit sit dolor Java amet, dolor ipsum amet,", "createdAt": 1712096873000}' to topic='twitter-topic'
+2024-04-02 22:27:53 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 29; Timestamp 1712096873664, at time 63820429288474
+2024-04-02 22:27:54 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  sit sit dolor Spring amet, dolor
+2024-04-02 22:27:54 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 1896795582738784968, "id": 2709276450621028525, "text": "Lorem  sit sit dolor Spring amet, dolor", "createdAt": 1712096874000}' to topic='twitter-topic'
+2024-04-02 22:27:54 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 30; Timestamp 1712096874668, at time 63821436803917
+2024-04-02 22:27:55 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  ipsum dolor ipsum Elasticsearch Lorem  amet, dolor
+2024-04-02 22:27:55 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 6679683119437910426, "id": 2248910760232380394, "text": "Lorem  ipsum dolor ipsum Elasticsearch Lorem  amet, dolor", "createdAt": 1712096875000}' to topic='twitter-topic'
+2024-04-02 22:27:55 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 31; Timestamp 1712096875671, at time 63822434628014
+2024-04-02 22:27:56 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  amet, sit sit Kafka sit dolor dolor
+2024-04-02 22:27:56 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7005722449655203006, "id": 9038402004512241051, "text": "Lorem  amet, sit sit Kafka sit dolor dolor", "createdAt": 1712096876000}' to topic='twitter-topic'
+2024-04-02 22:27:56 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 32; Timestamp 1712096876673, at time 63823437216585
+2024-04-02 22:27:57 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum dolor amet, ipsum Spring amet, sit
+2024-04-02 22:27:57 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 1901729009236435873, "id": 3808827219110641960, "text": "ipsum dolor amet, ipsum Spring amet, sit", "createdAt": 1712096877000}' to topic='twitter-topic'
+2024-04-02 22:27:57 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 12; Timestamp 1712096877676, at time 63824468339799
+2024-04-02 22:27:58 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, Lorem  ipsum amet, sit Microservices amet, dolor amet, Lorem
+2024-04-02 22:27:58 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 8314001557728290142, "id": 6885729700476509438, "text": "amet, Lorem  ipsum amet, sit Microservices amet, dolor amet, Lorem", "createdAt": 1712096878000}' to topic='twitter-topic'
+2024-04-02 22:27:58 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 33; Timestamp 1712096878678, at time 63825440517116
+2024-04-02 22:27:59 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit dolor ipsum Kafka amet, Lorem
+2024-04-02 22:27:59 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5005736181908046087, "id": 7548087478142167929, "text": "sit dolor ipsum Kafka amet, Lorem", "createdAt": 1712096879000}' to topic='twitter-topic'
+2024-04-02 22:27:59 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 19; Timestamp 1712096879682, at time 63826446551764
+2024-04-02 22:28:00 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, ipsum ipsum amet, Lorem  sit ipsum Spring ipsum ipsum sit Lorem  Lorem
+2024-04-02 22:28:00 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 1786137352092814489, "id": 5638303113659902173, "text": "amet, ipsum ipsum amet, Lorem  sit ipsum Spring ipsum ipsum sit Lorem  Lorem", "createdAt": 1712096880000}' to topic='twitter-topic'
+2024-04-02 22:28:00 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 34; Timestamp 1712096880684, at time 63827449150289
+2024-04-02 22:28:01 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor Lorem  sit amet, amet, Microservices dolor dolor Lorem  dolor
+2024-04-02 22:28:01 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5010017404332740170, "id": 6524270932819987790, "text": "dolor Lorem  sit amet, amet, Microservices dolor dolor Lorem  dolor", "createdAt": 1712096881000}' to topic='twitter-topic'
+2024-04-02 22:28:01 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 35; Timestamp 1712096881687, at time 63828452658920
+2024-04-02 22:28:02 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum Lorem  amet, dolor Lorem  dolor Kafka amet, sit dolor sit
+2024-04-02 22:28:02 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5448621521535456130, "id": 6442508108382577159, "text": "ipsum Lorem  amet, dolor Lorem  dolor Kafka amet, sit dolor sit", "createdAt": 1712096882000}' to topic='twitter-topic'
+2024-04-02 22:28:02 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 20; Timestamp 1712096882691, at time 63829460121875
+2024-04-02 22:28:03 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  ipsum Lorem  dolor ipsum ipsum amet, sit Java Lorem  dolor ipsum Lorem  dolor Lorem
+2024-04-02 22:28:03 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7826273588513564907, "id": 52635783580072361, "text": "Lorem  ipsum Lorem  dolor ipsum ipsum amet, sit Java Lorem  dolor ipsum Lorem  dolor Lorem", "createdAt": 1712096883000}' to topic='twitter-topic'
+2024-04-02 22:28:03 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 13; Timestamp 1712096883695, at time 63830468489278
+2024-04-02 22:28:04 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, dolor dolor ipsum sit sit amet, Kafka ipsum ipsum ipsum dolor ipsum
+2024-04-02 22:28:04 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 4773777755299412261, "id": 4992071089808103842, "text": "amet, dolor dolor ipsum sit sit amet, Kafka ipsum ipsum ipsum dolor ipsum", "createdAt": 1712096884000}' to topic='twitter-topic'
+2024-04-02 22:28:04 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 36; Timestamp 1712096884699, at time 63831471948970
+2024-04-02 22:28:05 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  dolor amet, Lorem  Lorem  sit ipsum Elasticsearch dolor Lorem  dolor Lorem  dolor dolor
+2024-04-02 22:28:05 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5034431053912044427, "id": 6305630559611387561, "text": "Lorem  dolor amet, Lorem  Lorem  sit ipsum Elasticsearch dolor Lorem  dolor Lorem  dolor dolor", "createdAt": 1712096885000}' to topic='twitter-topic'
+2024-04-02 22:28:05 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 37; Timestamp 1712096885701, at time 63832470062947
+2024-04-02 22:28:06 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor sit Lorem  ipsum Java amet, dolor ipsum
+2024-04-02 22:28:06 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5336557855433276091, "id": 234744254957036466, "text": "dolor sit Lorem  ipsum Java amet, dolor ipsum", "createdAt": 1712096886000}' to topic='twitter-topic'
+2024-04-02 22:28:06 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 21; Timestamp 1712096886704, at time 63833471402409
+2024-04-02 22:28:07 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor sit dolor Microservices Lorem  amet,
+2024-04-02 22:28:07 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 3785065057277485438, "id": 2570950481949851521, "text": "dolor sit dolor Microservices Lorem  amet,", "createdAt": 1712096887000}' to topic='twitter-topic'
+2024-04-02 22:28:07 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 14; Timestamp 1712096887707, at time 63834472738519
+2024-04-02 22:28:08 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor Lorem  Lorem  ipsum ipsum sit Lorem  ipsum Java ipsum ipsum amet, dolor Lorem  dolor ipsum
+2024-04-02 22:28:08 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 2601304375316057159, "id": 5734465349642960452, "text": "dolor Lorem  Lorem  ipsum ipsum sit Lorem  ipsum Java ipsum ipsum amet, dolor Lorem  dolor ipsum", "createdAt": 1712096888000}' to topic='twitter-topic'
+2024-04-02 22:28:08 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 38; Timestamp 1712096888712, at time 63835475476315
+2024-04-02 22:28:09 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor Lorem  amet, sit Lorem  Lorem  amet, Spring Lorem  amet, dolor amet, dolor
+2024-04-02 22:28:09 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 1656922130453934577, "id": 1712386928138992897, "text": "dolor Lorem  amet, sit Lorem  Lorem  amet, Spring Lorem  amet, dolor amet, dolor", "createdAt": 1712096889000}' to topic='twitter-topic'
+2024-04-02 22:28:09 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 15; Timestamp 1712096889715, at time 63836479153762
+2024-04-02 22:28:10 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum ipsum ipsum dolor Elasticsearch ipsum amet, amet,
+2024-04-02 22:28:10 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7087054413233336391, "id": 5819501998118939798, "text": "ipsum ipsum ipsum dolor Elasticsearch ipsum amet, amet,", "createdAt": 1712096890000}' to topic='twitter-topic'
+2024-04-02 22:28:10 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 16; Timestamp 1712096890718, at time 63837484327104
+2024-04-02 22:28:11 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor ipsum Lorem  amet, ipsum Lorem  amet, Java ipsum dolor dolor ipsum amet, dolor
+2024-04-02 22:28:11 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 2578732619091188221, "id": 994143188494654626, "text": "dolor ipsum Lorem  amet, ipsum Lorem  amet, Java ipsum dolor dolor ipsum amet, dolor", "createdAt": 1712096891000}' to topic='twitter-topic'
+2024-04-02 22:28:11 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 22; Timestamp 1712096891724, at time 63838491826931
+2024-04-02 22:28:12 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor dolor sit Lorem  amet, dolor Microservices dolor sit ipsum dolor
+2024-04-02 22:28:12 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 2814555336395006461, "id": 3263021200723915054, "text": "dolor dolor sit Lorem  amet, dolor Microservices dolor sit ipsum dolor", "createdAt": 1712096892000}' to topic='twitter-topic'
+2024-04-02 22:28:12 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 23; Timestamp 1712096892727, at time 63839490315393
+2024-04-02 22:28:13 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum ipsum dolor amet, sit amet, Elasticsearch amet, dolor ipsum amet, ipsum
+2024-04-02 22:28:13 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 8727123213272450866, "id": 1183982635353420426, "text": "ipsum ipsum dolor amet, sit amet, Elasticsearch amet, dolor ipsum amet, ipsum", "createdAt": 1712096893000}' to topic='twitter-topic'
+2024-04-02 22:28:13 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 17; Timestamp 1712096893729, at time 63840495225060
+2024-04-02 22:28:14 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum sit dolor sit dolor sit Lorem  Elasticsearch amet, amet, Lorem  dolor dolor amet,
+2024-04-02 22:28:14 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 4959073574556301971, "id": 1821680741141071403, "text": "ipsum sit dolor sit dolor sit Lorem  Elasticsearch amet, amet, Lorem  dolor dolor amet,", "createdAt": 1712096894000}' to topic='twitter-topic'
+2024-04-02 22:28:14 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 24; Timestamp 1712096894732, at time 63841498147311
+2024-04-02 22:28:15 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum dolor amet, amet, ipsum dolor amet, Microservices Lorem  ipsum dolor amet, Lorem
+2024-04-02 22:28:15 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7788334591850341464, "id": 6123053523426359031, "text": "ipsum dolor amet, amet, ipsum dolor amet, Microservices Lorem  ipsum dolor amet, Lorem", "createdAt": 1712096895000}' to topic='twitter-topic'
+2024-04-02 22:28:15 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 18; Timestamp 1712096895737, at time 63842508493774
+2024-04-02 22:28:16 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum sit Lorem  sit amet, sit ipsum dolor Kafka dolor Lorem  sit sit ipsum Lorem  Lorem
+2024-04-02 22:28:16 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5478140063278210507, "id": 5034352749186775112, "text": "ipsum sit Lorem  sit amet, sit ipsum dolor Kafka dolor Lorem  sit sit ipsum Lorem  Lorem", "createdAt": 1712096896000}' to topic='twitter-topic'
+2024-04-02 22:28:16 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 39; Timestamp 1712096896740, at time 63843514582732
+2024-04-02 22:28:17 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, Lorem  ipsum amet, Lorem  amet, Java amet, Lorem  sit Lorem
+2024-04-02 22:28:17 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 399541958750806310, "id": 5389185799100368949, "text": "amet, Lorem  ipsum amet, Lorem  amet, Java amet, Lorem  sit Lorem", "createdAt": 1712096897000}' to topic='twitter-topic'
+2024-04-02 22:28:17 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 19; Timestamp 1712096897742, at time 63844517728630
+2024-04-02 22:28:18 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  amet, dolor ipsum Kafka amet, amet,
+2024-04-02 22:28:18 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 2830250041973336301, "id": 4634406775033378324, "text": "Lorem  amet, dolor ipsum Kafka amet, amet,", "createdAt": 1712096898000}' to topic='twitter-topic'
+2024-04-02 22:28:18 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 40; Timestamp 1712096898744, at time 63845519215492
+2024-04-02 22:28:19 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  ipsum Lorem  Lorem  ipsum dolor amet, amet, Microservices ipsum amet, Lorem  amet, amet, Lorem  amet,
+2024-04-02 22:28:19 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7734206334290805152, "id": 3141851049371441632, "text": "Lorem  ipsum Lorem  Lorem  ipsum dolor amet, amet, Microservices ipsum amet, Lorem  amet, amet, Lorem  amet,", "createdAt": 1712096899000}' to topic='twitter-topic'
+2024-04-02 22:28:19 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 20; Timestamp 1712096899747, at time 63846522396559
+2024-04-02 22:28:20 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor sit sit sit Lorem  Lorem  amet, Kafka sit dolor Lorem  Lorem  dolor
+2024-04-02 22:28:20 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 6843603305500558981, "id": 7835468101275037843, "text": "dolor sit sit sit Lorem  Lorem  amet, Kafka sit dolor Lorem  Lorem  dolor", "createdAt": 1712096900000}' to topic='twitter-topic'
+2024-04-02 22:28:20 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 41; Timestamp 1712096900749, at time 63847528434967
+2024-04-02 22:28:21 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor sit Lorem  ipsum sit Java ipsum amet, dolor
+2024-04-02 22:28:21 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7408079674745369228, "id": 8498866160994797514, "text": "dolor sit Lorem  ipsum sit Java ipsum amet, dolor", "createdAt": 1712096901000}' to topic='twitter-topic'
+2024-04-02 22:28:21 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 21; Timestamp 1712096901752, at time 63848516891652
+2024-04-02 22:28:22 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, dolor Lorem  ipsum Java ipsum Lorem
+2024-04-02 22:28:22 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7109578961438964885, "id": 4738105388118199834, "text": "amet, dolor Lorem  ipsum Java ipsum Lorem", "createdAt": 1712096902000}' to topic='twitter-topic'
+2024-04-02 22:28:22 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 25; Timestamp 1712096902755, at time 63849520680186
+2024-04-02 22:28:23 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit ipsum ipsum ipsum Microservices Lorem  sit amet,
+2024-04-02 22:28:23 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 8873455267360418784, "id": 6073745187263301854, "text": "sit ipsum ipsum ipsum Microservices Lorem  sit amet,", "createdAt": 1712096903000}' to topic='twitter-topic'
+2024-04-02 22:28:23 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 42; Timestamp 1712096903760, at time 63850523413078
+2024-04-02 22:28:24 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor Lorem  sit dolor sit amet, sit Kafka Lorem  ipsum Lorem  amet, amet, Lorem
+2024-04-02 22:28:24 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7561955670546739309, "id": 6950526162384396438, "text": "dolor Lorem  sit dolor sit amet, sit Kafka Lorem  ipsum Lorem  amet, amet, Lorem", "createdAt": 1712096904000}' to topic='twitter-topic'
+2024-04-02 22:28:24 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 26; Timestamp 1712096904763, at time 63851530088250
+2024-04-02 22:28:25 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, ipsum dolor ipsum sit Spring ipsum dolor dolor Lorem
+2024-04-02 22:28:25 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7626608382838965506, "id": 4036343472089002644, "text": "amet, ipsum dolor ipsum sit Spring ipsum dolor dolor Lorem", "createdAt": 1712096905000}' to topic='twitter-topic'
+2024-04-02 22:28:25 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 22; Timestamp 1712096905766, at time 63852538074853
+2024-04-02 22:28:26 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum ipsum sit ipsum Kafka amet, amet,
+2024-04-02 22:28:26 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 8300394887299991479, "id": 8824134398504267906, "text": "ipsum ipsum sit ipsum Kafka amet, amet,", "createdAt": 1712096906000}' to topic='twitter-topic'
+2024-04-02 22:28:26 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 43; Timestamp 1712096906774, at time 63853541344432
+2024-04-02 22:28:27 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, ipsum ipsum dolor Java dolor ipsum ipsum
+2024-04-02 22:28:27 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 8429331700556580801, "id": 8061802156666455474, "text": "amet, ipsum ipsum dolor Java dolor ipsum ipsum", "createdAt": 1712096907000}' to topic='twitter-topic'
+2024-04-02 22:28:27 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 27; Timestamp 1712096907777, at time 63854541287670
+2024-04-02 22:28:28 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor Lorem  ipsum Spring Lorem  Lorem
+2024-04-02 22:28:28 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 2216628485794520539, "id": 3910986653055797928, "text": "dolor Lorem  ipsum Spring Lorem  Lorem", "createdAt": 1712096908000}' to topic='twitter-topic'
+2024-04-02 22:28:28 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 23; Timestamp 1712096908782, at time 63855549324456
+2024-04-02 22:28:29 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum dolor amet, Lorem  ipsum ipsum Elasticsearch ipsum sit ipsum ipsum amet,
+2024-04-02 22:28:29 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7254731163525973150, "id": 8044775145586058743, "text": "ipsum dolor amet, Lorem  ipsum ipsum Elasticsearch ipsum sit ipsum ipsum amet,", "createdAt": 1712096909000}' to topic='twitter-topic'
+2024-04-02 22:28:29 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 28; Timestamp 1712096909789, at time 63856565146992
+2024-04-02 22:28:30 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  dolor ipsum dolor amet, amet, Spring dolor dolor sit dolor Lorem
+2024-04-02 22:28:30 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 6596729705954308917, "id": 7039511979493463806, "text": "Lorem  dolor ipsum dolor amet, amet, Spring dolor dolor sit dolor Lorem", "createdAt": 1712096910000}' to topic='twitter-topic'
+2024-04-02 22:28:30 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 24; Timestamp 1712096910792, at time 63857560405260
+2024-04-02 22:28:31 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum ipsum Lorem  amet, Lorem  dolor Elasticsearch amet, dolor Lorem  amet,
+2024-04-02 22:28:31 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 1647188217389208894, "id": 7754100623342708042, "text": "ipsum ipsum Lorem  amet, Lorem  dolor Elasticsearch amet, dolor Lorem  amet,", "createdAt": 1712096911000}' to topic='twitter-topic'
+2024-04-02 22:28:31 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 25; Timestamp 1712096911794, at time 63858563220980
+2024-04-02 22:28:32 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  dolor ipsum amet, Lorem  Elasticsearch dolor ipsum Lorem
+2024-04-02 22:28:32 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7926855101745787945, "id": 7247459433981992923, "text": "Lorem  dolor ipsum amet, Lorem  Elasticsearch dolor ipsum Lorem", "createdAt": 1712096912000}' to topic='twitter-topic'
+2024-04-02 22:28:32 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 44; Timestamp 1712096912797, at time 63859564543309
+2024-04-02 22:28:33 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  sit Lorem  ipsum dolor sit Lorem  Lorem  Java ipsum Lorem  ipsum ipsum amet, Lorem
+2024-04-02 22:28:33 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 8850120498352864210, "id": 4526236738842343652, "text": "Lorem  sit Lorem  ipsum dolor sit Lorem  Lorem  Java ipsum Lorem  ipsum ipsum amet, Lorem", "createdAt": 1712096913000}' to topic='twitter-topic'
+2024-04-02 22:28:33 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 29; Timestamp 1712096913801, at time 63860571716465
+2024-04-02 22:28:34 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  Lorem  sit ipsum dolor Kafka Lorem  amet, Lorem  dolor
+2024-04-02 22:28:34 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 2557710409725230400, "id": 1352117197551966449, "text": "Lorem  Lorem  sit ipsum dolor Kafka Lorem  amet, Lorem  dolor", "createdAt": 1712096914000}' to topic='twitter-topic'
+2024-04-02 22:28:34 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 26; Timestamp 1712096914806, at time 63861569697178
+2024-04-02 22:28:35 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum amet, amet, dolor amet, dolor dolor amet, Java Lorem  amet, amet, Lorem  dolor dolor
+2024-04-02 22:28:35 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 1210508762804529675, "id": 4568611747406838287, "text": "ipsum amet, amet, dolor amet, dolor dolor amet, Java Lorem  amet, amet, Lorem  dolor dolor", "createdAt": 1712096915000}' to topic='twitter-topic'
+2024-04-02 22:28:35 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 30; Timestamp 1712096915809, at time 63862574081232
+2024-04-02 22:28:36 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, Lorem  Lorem  ipsum dolor Lorem  Kafka Lorem  ipsum Lorem  Lorem  Lorem
+2024-04-02 22:28:36 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 962165174627217246, "id": 8781417957438086738, "text": "amet, Lorem  Lorem  ipsum dolor Lorem  Kafka Lorem  ipsum Lorem  Lorem  Lorem", "createdAt": 1712096916000}' to topic='twitter-topic'
+2024-04-02 22:28:36 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 31; Timestamp 1712096916812, at time 63863578560587
+2024-04-02 22:28:37 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit dolor amet, dolor ipsum ipsum sit dolor Microservices ipsum amet, sit dolor ipsum sit amet,
+2024-04-02 22:28:37 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7058675774237192985, "id": 1658972641859781226, "text": "sit dolor amet, dolor ipsum ipsum sit dolor Microservices ipsum amet, sit dolor ipsum sit amet,", "createdAt": 1712096917000}' to topic='twitter-topic'
+2024-04-02 22:28:37 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 45; Timestamp 1712096917815, at time 63864577982109
+2024-04-02 22:28:38 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  Lorem  Lorem  Lorem  Lorem  ipsum Lorem  dolor Elasticsearch amet, ipsum amet, amet, Lorem  Lorem  dolor
+2024-04-02 22:28:38 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7935053337767995068, "id": 7095334763949736110, "text": "Lorem  Lorem  Lorem  Lorem  Lorem  ipsum Lorem  dolor Elasticsearch amet, ipsum amet, amet, Lorem  Lorem  dolor", "createdAt": 1712096918000}' to topic='twitter-topic'
+2024-04-02 22:28:38 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 32; Timestamp 1712096918817, at time 63865581495157
+2024-04-02 22:28:39 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor Lorem  amet, ipsum dolor Java sit Lorem  sit amet,
+2024-04-02 22:28:39 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7208043676441538031, "id": 3069119260641982045, "text": "dolor Lorem  amet, ipsum dolor Java sit Lorem  sit amet,", "createdAt": 1712096919000}' to topic='twitter-topic'
+2024-04-02 22:28:39 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 33; Timestamp 1712096919819, at time 63866582155480
+2024-04-02 22:28:40 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor dolor Lorem  sit dolor Lorem  Spring sit dolor ipsum Lorem
+2024-04-02 22:28:40 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 1647088571561642253, "id": 7600946377580474525, "text": "dolor dolor Lorem  sit dolor Lorem  Spring sit dolor ipsum Lorem", "createdAt": 1712096920000}' to topic='twitter-topic'
+2024-04-02 22:28:40 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 27; Timestamp 1712096920823, at time 63867588650485
+2024-04-02 22:28:41 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum Lorem  amet, ipsum Kafka dolor Lorem  amet,
+2024-04-02 22:28:41 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 990359205430724410, "id": 566943082513155046, "text": "ipsum Lorem  amet, ipsum Kafka dolor Lorem  amet,", "createdAt": 1712096921000}' to topic='twitter-topic'
+2024-04-02 22:28:41 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 28; Timestamp 1712096921833, at time 63868613940120
+2024-04-02 22:28:42 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor amet, Lorem  Lorem  dolor sit Elasticsearch ipsum dolor Lorem  sit
+2024-04-02 22:28:42 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 4507717899499249414, "id": 4616267219271092117, "text": "dolor amet, Lorem  Lorem  dolor sit Elasticsearch ipsum dolor Lorem  sit", "createdAt": 1712096922000}' to topic='twitter-topic'
+2024-04-02 22:28:42 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 29; Timestamp 1712096922836, at time 63869603938200
+2024-04-02 22:28:43 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum ipsum amet, amet, sit Kafka amet, ipsum dolor
+2024-04-02 22:28:43 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 4707784764101910621, "id": 2964578322160375596, "text": "ipsum ipsum amet, amet, sit Kafka amet, ipsum dolor", "createdAt": 1712096923000}' to topic='twitter-topic'
+2024-04-02 22:28:43 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 46; Timestamp 1712096923838, at time 63870607202074
+2024-04-02 22:28:44 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  sit sit sit amet, ipsum Spring amet, sit Lorem  amet,
+2024-04-02 22:28:44 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 2385144663872803457, "id": 6147597758282150527, "text": "Lorem  sit sit sit amet, ipsum Spring amet, sit Lorem  amet,", "createdAt": 1712096924000}' to topic='twitter-topic'
+2024-04-02 22:28:44 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 47; Timestamp 1712096924841, at time 63871626085039
+2024-04-02 22:28:45 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor sit ipsum dolor amet, sit amet, Kafka sit Lorem  Lorem  dolor amet,
+2024-04-02 22:28:45 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7843749055220838301, "id": 8196779568751128029, "text": "dolor sit ipsum dolor amet, sit amet, Kafka sit Lorem  Lorem  dolor amet,", "createdAt": 1712096925000}' to topic='twitter-topic'
+2024-04-02 22:28:45 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 34; Timestamp 1712096925844, at time 63872611670721
+2024-04-02 22:28:46 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor sit Lorem  amet, dolor dolor ipsum Microservices sit sit ipsum dolor sit amet,
+2024-04-02 22:28:46 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7328252678543913806, "id": 7567832262266488259, "text": "dolor sit Lorem  amet, dolor dolor ipsum Microservices sit sit ipsum dolor sit amet,", "createdAt": 1712096926000}' to topic='twitter-topic'
+2024-04-02 22:28:46 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 48; Timestamp 1712096926847, at time 63873612196496
+2024-04-02 22:28:47 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum Lorem  ipsum Lorem  dolor amet, sit Microservices Lorem  ipsum amet, amet, ipsum sit
+2024-04-02 22:28:47 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 3919870216626750022, "id": 6953005090705898634, "text": "ipsum Lorem  ipsum Lorem  dolor amet, sit Microservices Lorem  ipsum amet, amet, ipsum sit", "createdAt": 1712096927000}' to topic='twitter-topic'
+2024-04-02 22:28:47 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 30; Timestamp 1712096927851, at time 63874619719667
+2024-04-02 22:28:48 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, amet, sit amet, amet, amet, Java sit sit Lorem  ipsum ipsum
+2024-04-02 22:28:48 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 1536959474167464793, "id": 2622314589387948567, "text": "amet, amet, sit amet, amet, amet, Java sit sit Lorem  ipsum ipsum", "createdAt": 1712096928000}' to topic='twitter-topic'
+2024-04-02 22:28:48 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 49; Timestamp 1712096928855, at time 63875617157943
+2024-04-02 22:28:49 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  amet, dolor amet, dolor dolor Kafka ipsum dolor ipsum Lorem  Lorem
+2024-04-02 22:28:49 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 211803395151363941, "id": 437454467253634877, "text": "Lorem  amet, dolor amet, dolor dolor Kafka ipsum dolor ipsum Lorem  Lorem", "createdAt": 1712096929000}' to topic='twitter-topic'
+2024-04-02 22:28:49 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 50; Timestamp 1712096929857, at time 63876619837149
+2024-04-02 22:28:50 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, Lorem  ipsum Lorem  Lorem  Lorem  amet, Kafka amet, dolor dolor dolor sit sit
+2024-04-02 22:28:50 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 696713874457957962, "id": 6625346962495778238, "text": "amet, Lorem  ipsum Lorem  Lorem  Lorem  amet, Kafka amet, dolor dolor dolor sit sit", "createdAt": 1712096930000}' to topic='twitter-topic'
+2024-04-02 22:28:50 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 35; Timestamp 1712096930859, at time 63877622314597
+2024-04-02 22:28:51 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit Lorem  Lorem  Lorem  sit dolor Microservices amet, Lorem  sit Lorem
+2024-04-02 22:28:51 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 689968744712172762, "id": 2474917164616600693, "text": "sit Lorem  Lorem  Lorem  sit dolor Microservices amet, Lorem  sit Lorem", "createdAt": 1712096931000}' to topic='twitter-topic'
+2024-04-02 22:28:51 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 36; Timestamp 1712096931862, at time 63878628149004
+2024-04-02 22:28:52 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit dolor dolor dolor Lorem  Lorem  amet, Java sit Lorem  Lorem  sit dolor dolor
+2024-04-02 22:28:52 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 3227281875500441286, "id": 5994556251160764941, "text": "sit dolor dolor dolor Lorem  Lorem  amet, Java sit Lorem  Lorem  sit dolor dolor", "createdAt": 1712096932000}' to topic='twitter-topic'
+2024-04-02 22:28:52 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 31; Timestamp 1712096932864, at time 63879627706788
+2024-04-02 22:28:53 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor Lorem  Lorem  amet, amet, Java amet, ipsum sit
+2024-04-02 22:28:53 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 2031212281865156173, "id": 56593318602387170, "text": "dolor Lorem  Lorem  amet, amet, Java amet, ipsum sit", "createdAt": 1712096933000}' to topic='twitter-topic'
+2024-04-02 22:28:53 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 51; Timestamp 1712096933867, at time 63880631160124
+2024-04-02 22:28:54 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit Lorem  amet, Elasticsearch dolor amet,
+2024-04-02 22:28:54 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 1055779015802311043, "id": 8173645574254802189, "text": "sit Lorem  amet, Elasticsearch dolor amet,", "createdAt": 1712096934000}' to topic='twitter-topic'
+2024-04-02 22:28:54 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 32; Timestamp 1712096934870, at time 63881634073366
+2024-04-02 22:28:55 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  ipsum dolor sit sit ipsum sit sit Microservices ipsum Lorem  sit sit amet, Lorem
+2024-04-02 22:28:55 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 3436705207023798640, "id": 5425907169717886168, "text": "Lorem  ipsum dolor sit sit ipsum sit sit Microservices ipsum Lorem  sit sit amet, Lorem", "createdAt": 1712096935000}' to topic='twitter-topic'
+2024-04-02 22:28:55 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 37; Timestamp 1712096935872, at time 63882637793761
+2024-04-02 22:28:56 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, dolor dolor Elasticsearch Lorem  ipsum
+2024-04-02 22:28:56 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 421691547399542872, "id": 1907495107542613741, "text": "amet, dolor dolor Elasticsearch Lorem  ipsum", "createdAt": 1712096936000}' to topic='twitter-topic'
+2024-04-02 22:28:56 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 38; Timestamp 1712096936876, at time 63883640366295
+2024-04-02 22:28:57 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, amet, Lorem  Spring Lorem  dolor
+2024-04-02 22:28:57 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5065726242978266535, "id": 6450850473958345092, "text": "amet, amet, Lorem  Spring Lorem  dolor", "createdAt": 1712096937000}' to topic='twitter-topic'
+2024-04-02 22:28:57 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 52; Timestamp 1712096937878, at time 63884640829028
+2024-04-02 22:28:58 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, amet, Lorem  sit Lorem  Lorem  dolor Spring dolor ipsum sit amet, sit ipsum
+2024-04-02 22:28:58 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7874283204956268259, "id": 1007190397383350513, "text": "amet, amet, Lorem  sit Lorem  Lorem  dolor Spring dolor ipsum sit amet, sit ipsum", "createdAt": 1712096938000}' to topic='twitter-topic'
+2024-04-02 22:28:58 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 33; Timestamp 1712096938880, at time 63885642140327
+2024-04-02 22:28:59 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor sit sit Lorem  ipsum Kafka Lorem  sit Lorem
+2024-04-02 22:28:59 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7813575188458318342, "id": 5375237225458356849, "text": "dolor sit sit Lorem  ipsum Kafka Lorem  sit Lorem", "createdAt": 1712096939000}' to topic='twitter-topic'
+2024-04-02 22:28:59 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 39; Timestamp 1712096939883, at time 63886650639192
+2024-04-02 22:29:00 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor Lorem  Lorem  ipsum ipsum Microservices dolor ipsum sit
+2024-04-02 22:29:00 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 465123827429332175, "id": 5652256643188731333, "text": "dolor Lorem  Lorem  ipsum ipsum Microservices dolor ipsum sit", "createdAt": 1712096940000}' to topic='twitter-topic'
+2024-04-02 22:29:00 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 40; Timestamp 1712096940885, at time 63887653752983
+2024-04-02 22:29:01 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum ipsum dolor sit ipsum dolor Elasticsearch ipsum sit sit Lorem  Lorem
+2024-04-02 22:29:01 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 804160498215322148, "id": 2198142783462972849, "text": "ipsum ipsum dolor sit ipsum dolor Elasticsearch ipsum sit sit Lorem  Lorem", "createdAt": 1712096941000}' to topic='twitter-topic'
+2024-04-02 22:29:01 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 41; Timestamp 1712096941887, at time 63888652675394
+2024-04-02 22:29:02 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, ipsum amet, amet, ipsum sit dolor sit Spring ipsum dolor sit Lorem  Lorem  sit sit
+2024-04-02 22:29:02 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 9052818858475627275, "id": 1636467754204051288, "text": "amet, ipsum amet, amet, ipsum sit dolor sit Spring ipsum dolor sit Lorem  Lorem  sit sit", "createdAt": 1712096942000}' to topic='twitter-topic'
+2024-04-02 22:29:02 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 53; Timestamp 1712096942889, at time 63889654153092
+2024-04-02 22:29:03 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, sit Lorem  dolor Lorem  ipsum ipsum ipsum Microservices Lorem  amet, amet, sit sit amet,
+2024-04-02 22:29:03 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 3489127552322144797, "id": 4449901676113809682, "text": "amet, sit Lorem  dolor Lorem  ipsum ipsum ipsum Microservices Lorem  amet, amet, sit sit amet,", "createdAt": 1712096943000}' to topic='twitter-topic'
+2024-04-02 22:29:03 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 42; Timestamp 1712096943892, at time 63890656540587
+2024-04-02 22:29:04 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum dolor dolor dolor ipsum Spring amet, amet, amet,
+2024-04-02 22:29:04 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 4990332219864811602, "id": 3170371638249620336, "text": "ipsum dolor dolor dolor ipsum Spring amet, amet, amet,", "createdAt": 1712096944000}' to topic='twitter-topic'
+2024-04-02 22:29:04 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 34; Timestamp 1712096944894, at time 63891664390155
+2024-04-02 22:29:05 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor dolor ipsum Spring amet, sit
+2024-04-02 22:29:05 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 250427558984430374, "id": 4820695348296485347, "text": "dolor dolor ipsum Spring amet, sit", "createdAt": 1712096945000}' to topic='twitter-topic'
+2024-04-02 22:29:05 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 35; Timestamp 1712096945897, at time 63892663228788
+2024-04-02 22:29:06 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor Lorem  amet, ipsum Lorem  amet, amet, ipsum Kafka amet, dolor Lorem  Lorem  sit ipsum
+2024-04-02 22:29:06 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 1917226177315895257, "id": 3579886214984125749, "text": "dolor Lorem  amet, ipsum Lorem  amet, amet, ipsum Kafka amet, dolor Lorem  Lorem  sit ipsum", "createdAt": 1712096946000}' to topic='twitter-topic'
+2024-04-02 22:29:06 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 54; Timestamp 1712096946899, at time 63893661202176
+2024-04-02 22:29:07 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  amet, dolor ipsum Spring amet, sit
+2024-04-02 22:29:07 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 8306138508235493264, "id": 6437787531036950392, "text": "Lorem  amet, dolor ipsum Spring amet, sit", "createdAt": 1712096947000}' to topic='twitter-topic'
+2024-04-02 22:29:07 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 43; Timestamp 1712096947926, at time 63894695883582
+2024-04-02 22:29:08 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit ipsum sit Lorem  amet, amet, Lorem  Java amet, amet, dolor amet, amet,
+2024-04-02 22:29:08 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 4887742520729272851, "id": 6284955536582196553, "text": "sit ipsum sit Lorem  amet, amet, Lorem  Java amet, amet, dolor amet, amet,", "createdAt": 1712096948000}' to topic='twitter-topic'
+2024-04-02 22:29:08 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 55; Timestamp 1712096948929, at time 63895692141464
+2024-04-02 22:29:09 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum ipsum ipsum Lorem  Lorem  Java sit amet, Lorem
+2024-04-02 22:29:09 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 3097015670493955086, "id": 4405556660202974487, "text": "ipsum ipsum ipsum Lorem  Lorem  Java sit amet, Lorem", "createdAt": 1712096949000}' to topic='twitter-topic'
+2024-04-02 22:29:09 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 56; Timestamp 1712096949931, at time 63896693635963
+2024-04-02 22:29:10 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  ipsum amet, amet, sit Lorem  dolor Microservices sit Lorem  amet, ipsum amet, Lorem
+2024-04-02 22:29:10 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 4462234264516278479, "id": 8370584831015250233, "text": "Lorem  ipsum amet, amet, sit Lorem  dolor Microservices sit Lorem  amet, ipsum amet, Lorem", "createdAt": 1712096950000}' to topic='twitter-topic'
+2024-04-02 22:29:10 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 44; Timestamp 1712096950933, at time 63897697218969
+2024-04-02 22:29:11 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum amet, sit sit sit dolor sit Java ipsum ipsum sit Lorem  amet,
+2024-04-02 22:29:11 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 6020960455742558714, "id": 3413730935753304460, "text": "ipsum amet, sit sit sit dolor sit Java ipsum ipsum sit Lorem  amet,", "createdAt": 1712096951000}' to topic='twitter-topic'
+2024-04-02 22:29:11 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 57; Timestamp 1712096951935, at time 63898699236628
+2024-04-02 22:29:12 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, amet, ipsum dolor ipsum dolor ipsum Spring amet, dolor amet, ipsum dolor sit
+2024-04-02 22:29:12 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 4865818550393827201, "id": 8082801994762304500, "text": "amet, amet, ipsum dolor ipsum dolor ipsum Spring amet, dolor amet, ipsum dolor sit", "createdAt": 1712096952000}' to topic='twitter-topic'
+2024-04-02 22:29:12 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 58; Timestamp 1712096952937, at time 63899714082440
+2024-04-02 22:29:13 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum Lorem  amet, dolor Kafka sit ipsum
+2024-04-02 22:29:13 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 4658715778081991931, "id": 3872552468299839799, "text": "ipsum Lorem  amet, dolor Kafka sit ipsum", "createdAt": 1712096953000}' to topic='twitter-topic'
+2024-04-02 22:29:13 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 59; Timestamp 1712096953939, at time 63900701914745
+2024-04-02 22:29:14 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum ipsum amet, Elasticsearch dolor dolor
+2024-04-02 22:29:14 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 3711395617568152742, "id": 8938233833263286387, "text": "ipsum ipsum amet, Elasticsearch dolor dolor", "createdAt": 1712096954000}' to topic='twitter-topic'
+2024-04-02 22:29:14 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 45; Timestamp 1712096954941, at time 63901705350936
+2024-04-02 22:29:15 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, ipsum sit dolor Lorem  Spring amet, Lorem  dolor
+2024-04-02 22:29:15 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 1595435568425408299, "id": 244033368402641313, "text": "amet, ipsum sit dolor Lorem  Spring amet, Lorem  dolor", "createdAt": 1712096955000}' to topic='twitter-topic'
+2024-04-02 22:29:15 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 36; Timestamp 1712096955945, at time 63902709699325
+2024-04-02 22:29:16 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit sit amet, ipsum dolor dolor Elasticsearch ipsum Lorem  dolor amet, dolor
+2024-04-02 22:29:16 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 1942549852088087968, "id": 3477494348585400296, "text": "sit sit amet, ipsum dolor dolor Elasticsearch ipsum Lorem  dolor amet, dolor", "createdAt": 1712096956000}' to topic='twitter-topic'
+2024-04-02 22:29:16 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 37; Timestamp 1712096956949, at time 63903713272316
+2024-04-02 22:29:17 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit sit dolor amet, Spring dolor sit
+2024-04-02 22:29:17 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 1615200237624104970, "id": 7323399705928704223, "text": "sit sit dolor amet, Spring dolor sit", "createdAt": 1712096957000}' to topic='twitter-topic'
+2024-04-02 22:29:17 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 38; Timestamp 1712096957951, at time 63904718311602
+2024-04-02 22:29:18 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit Lorem  dolor sit Lorem  Lorem  Lorem  Elasticsearch Lorem  dolor sit sit ipsum Lorem
+2024-04-02 22:29:18 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 1109787205568303072, "id": 603479578110853642, "text": "sit Lorem  dolor sit Lorem  Lorem  Lorem  Elasticsearch Lorem  dolor sit sit ipsum Lorem", "createdAt": 1712096958000}' to topic='twitter-topic'
+2024-04-02 22:29:18 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 60; Timestamp 1712096958952, at time 63905714298218
+2024-04-02 22:29:19 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor ipsum ipsum amet, amet, Elasticsearch dolor dolor amet, sit
+2024-04-02 22:29:19 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 3516607804356676151, "id": 5574208593279454644, "text": "dolor ipsum ipsum amet, amet, Elasticsearch dolor dolor amet, sit", "createdAt": 1712096959000}' to topic='twitter-topic'
+2024-04-02 22:29:19 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 61; Timestamp 1712096959955, at time 63906716956312
+2024-04-02 22:29:20 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, Lorem  ipsum Lorem  Java dolor sit amet,
+2024-04-02 22:29:20 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5465995558160941100, "id": 7302575395980101529, "text": "amet, Lorem  ipsum Lorem  Java dolor sit amet,", "createdAt": 1712096960000}' to topic='twitter-topic'
+2024-04-02 22:29:20 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 46; Timestamp 1712096960958, at time 63907719970505
+2024-04-02 22:29:21 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum ipsum sit sit dolor ipsum ipsum Kafka ipsum Lorem  ipsum dolor Lorem  amet,
+2024-04-02 22:29:21 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 3423799380178295017, "id": 4770484285348211753, "text": "ipsum ipsum sit sit dolor ipsum ipsum Kafka ipsum Lorem  ipsum dolor Lorem  amet,", "createdAt": 1712096961000}' to topic='twitter-topic'
+2024-04-02 22:29:21 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 39; Timestamp 1712096961960, at time 63908723119657
+2024-04-02 22:29:22 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  ipsum amet, sit dolor Lorem  amet, ipsum Kafka ipsum sit dolor sit Lorem  dolor
+2024-04-02 22:29:22 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 4550916740744383991, "id": 562822420311266618, "text": "Lorem  ipsum amet, sit dolor Lorem  amet, ipsum Kafka ipsum sit dolor sit Lorem  dolor", "createdAt": 1712096962000}' to topic='twitter-topic'
+2024-04-02 22:29:22 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 47; Timestamp 1712096962963, at time 63909724966003
+2024-04-02 22:29:23 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor ipsum ipsum ipsum amet, Kafka Lorem  Lorem  dolor
+2024-04-02 22:29:23 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7023991425038231955, "id": 6642510368744620821, "text": "dolor ipsum ipsum ipsum amet, Kafka Lorem  Lorem  dolor", "createdAt": 1712096963000}' to topic='twitter-topic'
+2024-04-02 22:29:23 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 40; Timestamp 1712096963965, at time 63910726806948
+2024-04-02 22:29:24 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor sit ipsum ipsum ipsum amet, Lorem  Spring ipsum ipsum sit Lorem  sit
+2024-04-02 22:29:24 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 2414105177482340024, "id": 5892202516555634437, "text": "dolor sit ipsum ipsum ipsum amet, Lorem  Spring ipsum ipsum sit Lorem  sit", "createdAt": 1712096964000}' to topic='twitter-topic'
+2024-04-02 22:29:24 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 41; Timestamp 1712096964967, at time 63911728958392
+2024-04-02 22:29:25 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor Lorem  ipsum amet, ipsum Java dolor sit dolor
+2024-04-02 22:29:25 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 8168565315374742419, "id": 4891243621715400943, "text": "dolor Lorem  ipsum amet, ipsum Java dolor sit dolor", "createdAt": 1712096965000}' to topic='twitter-topic'
+2024-04-02 22:29:25 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 62; Timestamp 1712096965970, at time 63912733010027
+2024-04-02 22:29:26 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit Lorem  sit Lorem  sit amet, sit ipsum Elasticsearch sit amet, amet, dolor ipsum dolor
+2024-04-02 22:29:26 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 4395241235095267748, "id": 4668436244413230046, "text": "sit Lorem  sit Lorem  sit amet, sit ipsum Elasticsearch sit amet, amet, dolor ipsum dolor", "createdAt": 1712096966000}' to topic='twitter-topic'
+2024-04-02 22:29:26 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 48; Timestamp 1712096966972, at time 63913737448761
+2024-04-02 22:29:27 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum dolor Lorem  ipsum Microservices ipsum amet,
+2024-04-02 22:29:27 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 4748881979957051816, "id": 8345917645069449527, "text": "ipsum dolor Lorem  ipsum Microservices ipsum amet,", "createdAt": 1712096967000}' to topic='twitter-topic'
+2024-04-02 22:29:27 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 42; Timestamp 1712096967974, at time 63914735418724
+2024-04-02 22:29:28 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  Lorem  sit sit Microservices Lorem  ipsum ipsum
+2024-04-02 22:29:28 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 8727012246133345044, "id": 9079272027953799645, "text": "Lorem  Lorem  sit sit Microservices Lorem  ipsum ipsum", "createdAt": 1712096968000}' to topic='twitter-topic'
+2024-04-02 22:29:28 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 49; Timestamp 1712096968977, at time 63915740359355
+2024-04-02 22:29:29 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, amet, dolor amet, Microservices Lorem  ipsum dolor
+2024-04-02 22:29:29 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 3697085228347540647, "id": 2378146209232369301, "text": "amet, amet, dolor amet, Microservices Lorem  ipsum dolor", "createdAt": 1712096969000}' to topic='twitter-topic'
+2024-04-02 22:29:29 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 63; Timestamp 1712096969979, at time 63916739829065
+2024-04-02 22:29:30 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum ipsum dolor Kafka ipsum ipsum
+2024-04-02 22:29:30 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5192650766835530651, "id": 8395229471196772681, "text": "ipsum ipsum dolor Kafka ipsum ipsum", "createdAt": 1712096970000}' to topic='twitter-topic'
+2024-04-02 22:29:31 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 50; Timestamp 1712096970981, at time 63917754470600
+2024-04-02 22:29:31 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, ipsum sit amet, Lorem  amet, dolor sit Microservices ipsum dolor amet, sit sit ipsum amet,
+2024-04-02 22:29:31 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5119968651706228359, "id": 1660891587024005414, "text": "amet, ipsum sit amet, Lorem  amet, dolor sit Microservices ipsum dolor amet, sit sit ipsum amet,", "createdAt": 1712096971000}' to topic='twitter-topic'
+2024-04-02 22:29:31 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 51; Timestamp 1712096971983, at time 63918745743392
+2024-04-02 22:29:32 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor ipsum ipsum Kafka amet, Lorem
+2024-04-02 22:29:32 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 626966471988218862, "id": 8812596813330384163, "text": "dolor ipsum ipsum Kafka amet, Lorem", "createdAt": 1712096972000}' to topic='twitter-topic'
+2024-04-02 22:29:32 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 52; Timestamp 1712096972985, at time 63919749013855
+2024-04-02 22:29:33 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor amet, Lorem  dolor sit dolor ipsum Microservices Lorem  Lorem  ipsum sit ipsum Lorem
+2024-04-02 22:29:33 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 4489363186966175290, "id": 2423355029606324326, "text": "dolor amet, Lorem  dolor sit dolor ipsum Microservices Lorem  Lorem  ipsum sit ipsum Lorem", "createdAt": 1712096973000}' to topic='twitter-topic'
+2024-04-02 22:29:34 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 53; Timestamp 1712096973987, at time 63920755734110
+2024-04-02 22:29:34 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  Lorem  dolor ipsum Lorem  dolor Kafka ipsum ipsum amet, ipsum dolor
+2024-04-02 22:29:34 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 2312470752225547314, "id": 5785400856318759043, "text": "Lorem  Lorem  dolor ipsum Lorem  dolor Kafka ipsum ipsum amet, ipsum dolor", "createdAt": 1712096974000}' to topic='twitter-topic'
+2024-04-02 22:29:35 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 54; Timestamp 1712096974989, at time 63921753740586
+2024-04-02 22:29:35 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor sit dolor ipsum Kafka sit ipsum dolor
+2024-04-02 22:29:35 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5234236505114852893, "id": 1543364995384024713, "text": "dolor sit dolor ipsum Kafka sit ipsum dolor", "createdAt": 1712096975000}' to topic='twitter-topic'
+2024-04-02 22:29:36 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 43; Timestamp 1712096975991, at time 63922754831654
+2024-04-02 22:29:36 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor dolor dolor ipsum dolor Lorem  Java Lorem  ipsum sit sit
+2024-04-02 22:29:36 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 4487379857516569569, "id": 2920166244694983247, "text": "dolor dolor dolor ipsum dolor Lorem  Java Lorem  ipsum sit sit", "createdAt": 1712096976000}' to topic='twitter-topic'
+2024-04-02 22:29:37 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 44; Timestamp 1712096976993, at time 63923757719018
+2024-04-02 22:29:37 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit sit dolor sit sit Lorem  Elasticsearch dolor Lorem  dolor ipsum
+2024-04-02 22:29:37 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7349475014504411033, "id": 4819289277230910490, "text": "sit sit dolor sit sit Lorem  Elasticsearch dolor Lorem  dolor ipsum", "createdAt": 1712096977000}' to topic='twitter-topic'
+2024-04-02 22:29:38 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 45; Timestamp 1712096977996, at time 63924758668653
+2024-04-02 22:29:38 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum ipsum ipsum ipsum Elasticsearch amet, ipsum
+2024-04-02 22:29:38 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 8676685137621310866, "id": 1268547430779408712, "text": "ipsum ipsum ipsum ipsum Elasticsearch amet, ipsum", "createdAt": 1712096978000}' to topic='twitter-topic'
+2024-04-02 22:29:39 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 46; Timestamp 1712096978998, at time 63925760134225
+2024-04-02 22:29:39 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum dolor dolor sit dolor ipsum sit Spring ipsum amet, sit amet, amet,
+2024-04-02 22:29:39 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 2459711358778648842, "id": 4499537322314004551, "text": "ipsum dolor dolor sit dolor ipsum sit Spring ipsum amet, sit amet, amet,", "createdAt": 1712096979000}' to topic='twitter-topic'
+2024-04-02 22:29:40 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 47; Timestamp 1712096980000, at time 63926761480795
+2024-04-02 22:29:41 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit sit amet, ipsum amet, Kafka amet, sit Lorem  Lorem
+2024-04-02 22:29:41 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7251534492168670010, "id": 2088792185110977438, "text": "sit sit amet, ipsum amet, Kafka amet, sit Lorem  Lorem", "createdAt": 1712096981000}' to topic='twitter-topic'
+2024-04-02 22:29:41 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 64; Timestamp 1712096981001, at time 63927763258268
+2024-04-02 22:29:42 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum Lorem  ipsum ipsum ipsum Lorem  Kafka ipsum dolor Lorem  dolor dolor
+2024-04-02 22:29:42 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 4296115361920229578, "id": 2399512382358951493, "text": "ipsum Lorem  ipsum ipsum ipsum Lorem  Kafka ipsum dolor Lorem  dolor dolor", "createdAt": 1712096982000}' to topic='twitter-topic'
+2024-04-02 22:29:42 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 65; Timestamp 1712096982005, at time 63928767573052
+2024-04-02 22:29:43 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, Lorem  amet, amet, dolor Kafka sit Lorem  amet,
+2024-04-02 22:29:43 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5285332202971689402, "id": 6098145931152315720, "text": "amet, Lorem  amet, amet, dolor Kafka sit Lorem  amet,", "createdAt": 1712096983000}' to topic='twitter-topic'
+2024-04-02 22:29:43 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 48; Timestamp 1712096983008, at time 63929771199434
+2024-04-02 22:29:44 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor Lorem  Lorem  sit Elasticsearch sit amet, dolor
+2024-04-02 22:29:44 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7481698143607095068, "id": 3481693664120770059, "text": "dolor Lorem  Lorem  sit Elasticsearch sit amet, dolor", "createdAt": 1712096984000}' to topic='twitter-topic'
+2024-04-02 22:29:44 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 49; Timestamp 1712096984011, at time 63930774181756
+2024-04-02 22:29:45 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  ipsum Lorem  Lorem  Java sit ipsum sit
+2024-04-02 22:29:45 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 6277461277455989025, "id": 5734643800141259899, "text": "Lorem  ipsum Lorem  Lorem  Java sit ipsum sit", "createdAt": 1712096985000}' to topic='twitter-topic'
+2024-04-02 22:29:45 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 55; Timestamp 1712096985013, at time 63931773988287
+2024-04-02 22:29:46 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum ipsum sit ipsum dolor amet, Spring amet, amet, amet, amet,
+2024-04-02 22:29:46 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 8599460425920748586, "id": 6783195535924611578, "text": "ipsum ipsum sit ipsum dolor amet, Spring amet, amet, amet, amet,", "createdAt": 1712096986000}' to topic='twitter-topic'
+2024-04-02 22:29:46 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 66; Timestamp 1712096986015, at time 63932777950390
+2024-04-02 22:29:47 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  sit amet, dolor ipsum Java sit amet, sit
+2024-04-02 22:29:47 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7361172918300882491, "id": 3744665498324592640, "text": "Lorem  sit amet, dolor ipsum Java sit amet, sit", "createdAt": 1712096987000}' to topic='twitter-topic'
+2024-04-02 22:29:47 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 50; Timestamp 1712096987017, at time 63933782381387
+2024-04-02 22:29:48 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum sit sit Elasticsearch Lorem  ipsum
+2024-04-02 22:29:48 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5617132929249833150, "id": 6356429645873460962, "text": "ipsum sit sit Elasticsearch Lorem  ipsum", "createdAt": 1712096988000}' to topic='twitter-topic'
+2024-04-02 22:29:48 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 51; Timestamp 1712096988020, at time 63934781643302
+2024-04-02 22:29:49 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, amet, amet, ipsum dolor Java ipsum Lorem  dolor Lorem
+2024-04-02 22:29:49 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 6766767603076353918, "id": 7736612279367898609, "text": "amet, amet, amet, ipsum dolor Java ipsum Lorem  dolor Lorem", "createdAt": 1712096989000}' to topic='twitter-topic'
+2024-04-02 22:29:49 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 67; Timestamp 1712096989022, at time 63935783488407
+2024-04-02 22:29:50 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum amet, dolor ipsum ipsum dolor Microservices sit Lorem  dolor dolor
+2024-04-02 22:29:50 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7868276809873438769, "id": 3764817986648113570, "text": "ipsum amet, dolor ipsum ipsum dolor Microservices sit Lorem  dolor dolor", "createdAt": 1712096990000}' to topic='twitter-topic'
+2024-04-02 22:29:50 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 68; Timestamp 1712096990024, at time 63936784977314
+2024-04-02 22:29:51 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, Lorem  amet, amet, Spring dolor ipsum
+2024-04-02 22:29:51 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 3811630048707078009, "id": 5403311258229409152, "text": "amet, Lorem  amet, amet, Spring dolor ipsum", "createdAt": 1712096991000}' to topic='twitter-topic'
+2024-04-02 22:29:51 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 56; Timestamp 1712096991027, at time 63937791338405
+2024-04-02 22:29:52 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  ipsum ipsum sit dolor ipsum amet, dolor Kafka dolor amet, Lorem  dolor ipsum ipsum sit
+2024-04-02 22:29:52 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7653709932232983232, "id": 2134433879343327676, "text": "Lorem  ipsum ipsum sit dolor ipsum amet, dolor Kafka dolor amet, Lorem  dolor ipsum ipsum sit", "createdAt": 1712096992000}' to topic='twitter-topic'
+2024-04-02 22:29:52 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 57; Timestamp 1712096992030, at time 63938790930919
+2024-04-02 22:29:53 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum sit dolor amet, ipsum ipsum dolor sit Microservices dolor ipsum ipsum sit sit ipsum Lorem
+2024-04-02 22:29:53 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 4695702856491680382, "id": 1111650212285883721, "text": "ipsum sit dolor amet, ipsum ipsum dolor sit Microservices dolor ipsum ipsum sit sit ipsum Lorem", "createdAt": 1712096993000}' to topic='twitter-topic'
+2024-04-02 22:29:53 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 69; Timestamp 1712096993032, at time 63939793770221
+2024-04-02 22:29:54 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum amet, amet, amet, Kafka ipsum dolor Lorem
+2024-04-02 22:29:54 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 2915036710370586761, "id": 957535988633564931, "text": "ipsum amet, amet, amet, Kafka ipsum dolor Lorem", "createdAt": 1712096994000}' to topic='twitter-topic'
+2024-04-02 22:29:54 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 70; Timestamp 1712096994035, at time 63940797338527
+2024-04-02 22:29:55 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit Lorem  amet, Lorem  Lorem  amet, dolor Microservices amet, ipsum Lorem  ipsum dolor
+2024-04-02 22:29:55 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 8071619557189133997, "id": 5887101399713063721, "text": "sit Lorem  amet, Lorem  Lorem  amet, dolor Microservices amet, ipsum Lorem  ipsum dolor", "createdAt": 1712096995000}' to topic='twitter-topic'
+2024-04-02 22:29:55 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 52; Timestamp 1712096995036, at time 63941799383273
+2024-04-02 22:29:56 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, Lorem  amet, amet, dolor amet, sit ipsum Elasticsearch Lorem  ipsum amet, amet, ipsum sit Lorem
+2024-04-02 22:29:56 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5578061370985606374, "id": 5860884725870201532, "text": "amet, Lorem  amet, amet, dolor amet, sit ipsum Elasticsearch Lorem  ipsum amet, amet, ipsum sit Lorem", "createdAt": 1712096996000}' to topic='twitter-topic'
+2024-04-02 22:29:56 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 71; Timestamp 1712096996038, at time 63942797744031
+2024-04-02 22:29:57 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, Lorem  amet, amet, sit dolor Java amet, sit amet, ipsum
+2024-04-02 22:29:57 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 1217042042906633685, "id": 6382398724857059734, "text": "amet, Lorem  amet, amet, sit dolor Java amet, sit amet, ipsum", "createdAt": 1712096997000}' to topic='twitter-topic'
+2024-04-02 22:29:57 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 72; Timestamp 1712096997040, at time 63943800968673
+2024-04-02 22:29:58 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit ipsum amet, sit sit ipsum ipsum ipsum Elasticsearch sit ipsum dolor dolor Lorem  ipsum
+2024-04-02 22:29:58 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 3329878964491043091, "id": 1772414246748567106, "text": "sit ipsum amet, sit sit ipsum ipsum ipsum Elasticsearch sit ipsum dolor dolor Lorem  ipsum", "createdAt": 1712096998000}' to topic='twitter-topic'
+2024-04-02 22:29:58 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 73; Timestamp 1712096998042, at time 63944803765317
+2024-04-02 22:29:59 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, amet, ipsum sit Lorem  dolor Spring ipsum dolor Lorem  ipsum
+2024-04-02 22:29:59 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5793582709027340375, "id": 6509279773346671391, "text": "amet, amet, ipsum sit Lorem  dolor Spring ipsum dolor Lorem  ipsum", "createdAt": 1712096999000}' to topic='twitter-topic'
+2024-04-02 22:29:59 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 58; Timestamp 1712096999044, at time 63945809482651
+2024-04-02 22:30:00 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, sit amet, amet, sit ipsum dolor Microservices dolor amet, dolor dolor sit amet,
+2024-04-02 22:30:00 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 3939609056729610571, "id": 6574221512442481926, "text": "amet, sit amet, amet, sit ipsum dolor Microservices dolor amet, dolor dolor sit amet,", "createdAt": 1712097000000}' to topic='twitter-topic'
+2024-04-02 22:30:00 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 53; Timestamp 1712097000046, at time 63946812306395
+2024-04-02 22:30:01 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor ipsum Lorem  amet, dolor dolor amet, Java ipsum ipsum Lorem  amet, ipsum
+2024-04-02 22:30:01 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7630837432827578996, "id": 1706810441032302146, "text": "dolor ipsum Lorem  amet, dolor dolor amet, Java ipsum ipsum Lorem  amet, ipsum", "createdAt": 1712097001000}' to topic='twitter-topic'
+2024-04-02 22:30:01 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 74; Timestamp 1712097001048, at time 63947816754933
+2024-04-02 22:30:02 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor ipsum sit Spring ipsum amet,
+2024-04-02 22:30:02 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 6439240490143407521, "id": 7836109645307950683, "text": "dolor ipsum sit Spring ipsum amet,", "createdAt": 1712097002000}' to topic='twitter-topic'
+2024-04-02 22:30:02 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 54; Timestamp 1712097002050, at time 63948815907886
+2024-04-02 22:30:03 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, amet, amet, sit ipsum amet, Kafka sit amet, Lorem  ipsum
+2024-04-02 22:30:03 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 1364305655020224654, "id": 7539115486214306204, "text": "amet, amet, amet, sit ipsum amet, Kafka sit amet, Lorem  ipsum", "createdAt": 1712097003000}' to topic='twitter-topic'
+2024-04-02 22:30:03 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 55; Timestamp 1712097003052, at time 63949817308002
+2024-04-02 22:30:04 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor ipsum amet, ipsum sit ipsum Kafka sit amet, ipsum Lorem
+2024-04-02 22:30:04 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7550895567296878819, "id": 8796328990734130367, "text": "dolor ipsum amet, ipsum sit ipsum Kafka sit amet, ipsum Lorem", "createdAt": 1712097004000}' to topic='twitter-topic'
+2024-04-02 22:30:04 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 75; Timestamp 1712097004054, at time 63950817693017
+2024-04-02 22:30:05 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  amet, ipsum sit dolor Spring sit Lorem  Lorem
+2024-04-02 22:30:05 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 3705709300471068018, "id": 2718844989592704534, "text": "Lorem  amet, ipsum sit dolor Spring sit Lorem  Lorem", "createdAt": 1712097005000}' to topic='twitter-topic'
+2024-04-02 22:30:05 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 76; Timestamp 1712097005058, at time 63951819376833
+2024-04-02 22:30:06 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit amet, dolor amet, ipsum dolor ipsum Elasticsearch dolor amet, amet, amet, sit
+2024-04-02 22:30:06 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 4549928591529636150, "id": 7487224807945452881, "text": "sit amet, dolor amet, ipsum dolor ipsum Elasticsearch dolor amet, amet, amet, sit", "createdAt": 1712097006000}' to topic='twitter-topic'
+2024-04-02 22:30:06 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 59; Timestamp 1712097006062, at time 63952825421449
+2024-04-02 22:30:07 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  ipsum dolor Lorem  amet, ipsum Elasticsearch amet, dolor ipsum Lorem  dolor
+2024-04-02 22:30:07 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 525660393394366049, "id": 3456775842623447609, "text": "Lorem  ipsum dolor Lorem  amet, ipsum Elasticsearch amet, dolor ipsum Lorem  dolor", "createdAt": 1712097007000}' to topic='twitter-topic'
+2024-04-02 22:30:07 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 56; Timestamp 1712097007065, at time 63953827731065
+2024-04-02 22:30:08 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  amet, ipsum amet, amet, Elasticsearch dolor Lorem  ipsum ipsum
+2024-04-02 22:30:08 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5447230751285705189, "id": 1643970739086294190, "text": "Lorem  amet, ipsum amet, amet, Elasticsearch dolor Lorem  ipsum ipsum", "createdAt": 1712097008000}' to topic='twitter-topic'
+2024-04-02 22:30:08 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 77; Timestamp 1712097008068, at time 63954831694403
+2024-04-02 22:30:09 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum sit amet, amet, dolor amet, Kafka ipsum amet, Lorem  sit ipsum
+2024-04-02 22:30:09 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 6900404087756747467, "id": 7379968196845547933, "text": "ipsum sit amet, amet, dolor amet, Kafka ipsum amet, Lorem  sit ipsum", "createdAt": 1712097009000}' to topic='twitter-topic'
+2024-04-02 22:30:09 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 78; Timestamp 1712097009071, at time 63955836320439
+2024-04-02 22:30:10 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit dolor sit sit dolor sit amet, ipsum Elasticsearch ipsum dolor amet, Lorem  ipsum Lorem  Lorem
+2024-04-02 22:30:10 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 8337277938354860208, "id": 7681040830395098978, "text": "sit dolor sit sit dolor sit amet, ipsum Elasticsearch ipsum dolor amet, Lorem  ipsum Lorem  Lorem", "createdAt": 1712097010000}' to topic='twitter-topic'
+2024-04-02 22:30:10 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 79; Timestamp 1712097010074, at time 63956835787041
+2024-04-02 22:30:11 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum ipsum ipsum ipsum amet, dolor Java amet, dolor sit sit dolor
+2024-04-02 22:30:11 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 3913642873550835742, "id": 3720124515608533170, "text": "ipsum ipsum ipsum ipsum amet, dolor Java amet, dolor sit sit dolor", "createdAt": 1712097011000}' to topic='twitter-topic'
+2024-04-02 22:30:11 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 60; Timestamp 1712097011076, at time 63957837536774
+2024-04-02 22:30:12 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor dolor Lorem  Lorem  Lorem  amet, Kafka amet, Lorem  ipsum Lorem
+2024-04-02 22:30:12 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 2698625363306438548, "id": 4569568277748328413, "text": "dolor dolor Lorem  Lorem  Lorem  amet, Kafka amet, Lorem  ipsum Lorem", "createdAt": 1712097012000}' to topic='twitter-topic'
+2024-04-02 22:30:12 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 80; Timestamp 1712097012078, at time 63958838535700
+2024-04-02 22:30:13 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum dolor dolor Lorem  sit ipsum amet, amet, Spring Lorem  amet, sit Lorem  dolor dolor sit
+2024-04-02 22:30:13 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7346888241236483053, "id": 7916474722066332992, "text": "ipsum dolor dolor Lorem  sit ipsum amet, amet, Spring Lorem  amet, sit Lorem  dolor dolor sit", "createdAt": 1712097013000}' to topic='twitter-topic'
+2024-04-02 22:30:13 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 57; Timestamp 1712097013080, at time 63959839779128
+2024-04-02 22:30:14 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit Lorem  dolor dolor dolor amet, ipsum Kafka dolor dolor amet, Lorem  ipsum
+2024-04-02 22:30:14 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 4846982265476056639, "id": 7114002003585788601, "text": "sit Lorem  dolor dolor dolor amet, ipsum Kafka dolor dolor amet, Lorem  ipsum", "createdAt": 1712097014000}' to topic='twitter-topic'
+2024-04-02 22:30:14 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 81; Timestamp 1712097014083, at time 63960844243574
+2024-04-02 22:30:15 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit sit Lorem  Lorem  dolor Kafka ipsum Lorem  dolor ipsum
+2024-04-02 22:30:15 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5301577104993506658, "id": 4123433204116663902, "text": "sit sit Lorem  Lorem  dolor Kafka ipsum Lorem  dolor ipsum", "createdAt": 1712097015000}' to topic='twitter-topic'
+2024-04-02 22:30:15 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 58; Timestamp 1712097015085, at time 63961846656858
+2024-04-02 22:30:16 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, dolor sit Lorem  ipsum sit Lorem  Lorem  Spring ipsum sit sit ipsum amet, Lorem
+2024-04-02 22:30:16 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 8881271690267198038, "id": 7344132777197690506, "text": "amet, dolor sit Lorem  ipsum sit Lorem  Lorem  Spring ipsum sit sit ipsum amet, Lorem", "createdAt": 1712097016000}' to topic='twitter-topic'
+2024-04-02 22:30:16 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 59; Timestamp 1712097016087, at time 63962849617041
+2024-04-02 22:30:17 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum Lorem  amet, amet, sit amet, Microservices ipsum sit ipsum sit dolor
+2024-04-02 22:30:17 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7336349536199841712, "id": 4413665900731500071, "text": "ipsum Lorem  amet, amet, sit amet, Microservices ipsum sit ipsum sit dolor", "createdAt": 1712097017000}' to topic='twitter-topic'
+2024-04-02 22:30:17 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 60; Timestamp 1712097017090, at time 63963851958125
+2024-04-02 22:30:18 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  amet, sit ipsum dolor Lorem  Spring dolor amet, amet, Lorem  sit
+2024-04-02 22:30:18 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 6028764588527672587, "id": 1010555586527858927, "text": "Lorem  amet, sit ipsum dolor Lorem  Spring dolor amet, amet, Lorem  sit", "createdAt": 1712097018000}' to topic='twitter-topic'
+2024-04-02 22:30:18 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 82; Timestamp 1712097018093, at time 63964854415947
+2024-04-02 22:30:19 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor ipsum amet, Java amet, dolor
+2024-04-02 22:30:19 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 1893232285861606052, "id": 798393950863776004, "text": "dolor ipsum amet, Java amet, dolor", "createdAt": 1712097019000}' to topic='twitter-topic'
+2024-04-02 22:30:19 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 61; Timestamp 1712097019095, at time 63965862414888
+2024-04-02 22:30:20 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit Lorem  Lorem  Lorem  amet, Microservices amet, Lorem  Lorem
+2024-04-02 22:30:20 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 1581897610088201827, "id": 3178119609292373208, "text": "sit Lorem  Lorem  Lorem  amet, Microservices amet, Lorem  Lorem", "createdAt": 1712097020000}' to topic='twitter-topic'
+2024-04-02 22:30:20 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 83; Timestamp 1712097020097, at time 63966859592312
+2024-04-02 22:30:21 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  amet, dolor dolor sit ipsum Lorem  Lorem  Kafka amet, Lorem  Lorem  Lorem  Lorem  sit ipsum
+2024-04-02 22:30:21 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5453638706330004739, "id": 6091797857829941596, "text": "Lorem  amet, dolor dolor sit ipsum Lorem  Lorem  Kafka amet, Lorem  Lorem  Lorem  Lorem  sit ipsum", "createdAt": 1712097021000}' to topic='twitter-topic'
+2024-04-02 22:30:21 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 84; Timestamp 1712097021099, at time 63967871174061
+2024-04-02 22:30:22 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit Lorem  ipsum dolor Elasticsearch dolor amet,
+2024-04-02 22:30:22 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 8479864146348085096, "id": 4577134285329711346, "text": "sit Lorem  ipsum dolor Elasticsearch dolor amet,", "createdAt": 1712097022000}' to topic='twitter-topic'
+2024-04-02 22:30:22 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 61; Timestamp 1712097022101, at time 63968865578990
+2024-04-02 22:30:23 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum amet, dolor amet, amet, amet, dolor amet, Spring sit Lorem  dolor amet, sit ipsum
+2024-04-02 22:30:23 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 6778758682612156006, "id": 1264705836386673102, "text": "ipsum amet, dolor amet, amet, amet, dolor amet, Spring sit Lorem  dolor amet, sit ipsum", "createdAt": 1712097023000}' to topic='twitter-topic'
+2024-04-02 22:30:23 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 62; Timestamp 1712097023103, at time 63969877796273
+2024-04-02 22:30:24 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, dolor ipsum ipsum amet, sit sit amet, Kafka amet, dolor amet, dolor dolor dolor
+2024-04-02 22:30:24 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 4111877917808416415, "id": 2818035463685993939, "text": "amet, dolor ipsum ipsum amet, sit sit amet, Kafka amet, dolor amet, dolor dolor dolor", "createdAt": 1712097024000}' to topic='twitter-topic'
+2024-04-02 22:30:24 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 85; Timestamp 1712097024105, at time 63970870838109
+2024-04-02 22:30:25 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, dolor Lorem  Kafka Lorem  dolor
+2024-04-02 22:30:25 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 6605687555875849995, "id": 2783911087124305893, "text": "amet, dolor Lorem  Kafka Lorem  dolor", "createdAt": 1712097025000}' to topic='twitter-topic'
+2024-04-02 22:30:25 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 62; Timestamp 1712097025107, at time 63971871240025
+2024-04-02 22:30:26 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor amet, ipsum sit dolor dolor Lorem  Microservices sit ipsum dolor amet, sit Lorem
+2024-04-02 22:30:26 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 2195237368272636330, "id": 325371645956838701, "text": "dolor amet, ipsum sit dolor dolor Lorem  Microservices sit ipsum dolor amet, sit Lorem", "createdAt": 1712097026000}' to topic='twitter-topic'
+2024-04-02 22:30:26 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 86; Timestamp 1712097026109, at time 63972871054397
+2024-04-02 22:30:27 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor Lorem  dolor sit amet, amet, amet, Spring ipsum amet, dolor ipsum sit
+2024-04-02 22:30:27 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 8913775799705376952, "id": 7603377596768437776, "text": "dolor Lorem  dolor sit amet, amet, amet, Spring ipsum amet, dolor ipsum sit", "createdAt": 1712097027000}' to topic='twitter-topic'
+2024-04-02 22:30:27 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 63; Timestamp 1712097027111, at time 63973878383344
+2024-04-02 22:30:28 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, Lorem  sit dolor Elasticsearch dolor dolor amet,
+2024-04-02 22:30:28 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 1286719945932106602, "id": 1984455642872922367, "text": "amet, Lorem  sit dolor Elasticsearch dolor dolor amet,", "createdAt": 1712097028000}' to topic='twitter-topic'
+2024-04-02 22:30:28 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 64; Timestamp 1712097028112, at time 63974874430790
+2024-04-02 22:30:29 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  Lorem  dolor amet, Microservices sit ipsum
+2024-04-02 22:30:29 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 6231592558347826738, "id": 798897363994996277, "text": "Lorem  Lorem  dolor amet, Microservices sit ipsum", "createdAt": 1712097029000}' to topic='twitter-topic'
+2024-04-02 22:30:29 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 87; Timestamp 1712097029118, at time 63975880159550
+2024-04-02 22:30:30 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor sit Lorem  Lorem  Kafka Lorem  ipsum Lorem
+2024-04-02 22:30:30 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 1857618649716085709, "id": 5584597527805147197, "text": "dolor sit Lorem  Lorem  Kafka Lorem  ipsum Lorem", "createdAt": 1712097030000}' to topic='twitter-topic'
+2024-04-02 22:30:30 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 63; Timestamp 1712097030123, at time 63976884190426
+2024-04-02 22:30:31 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor sit amet, dolor sit ipsum Spring amet, dolor amet, dolor dolor
+2024-04-02 22:30:31 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 8069908003526000246, "id": 3083375486079950322, "text": "dolor sit amet, dolor sit ipsum Spring amet, dolor amet, dolor dolor", "createdAt": 1712097031000}' to topic='twitter-topic'
+2024-04-02 22:30:31 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 65; Timestamp 1712097031125, at time 63977890884278
+2024-04-02 22:30:32 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit Lorem  sit Spring amet, Lorem
+2024-04-02 22:30:32 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 1890792385570572638, "id": 6800726638554312379, "text": "sit Lorem  sit Spring amet, Lorem", "createdAt": 1712097032000}' to topic='twitter-topic'
+2024-04-02 22:30:32 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 64; Timestamp 1712097032127, at time 63978890802890
+2024-04-02 22:30:33 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, Lorem  dolor amet, ipsum sit ipsum Lorem  Kafka Lorem  Lorem  dolor ipsum ipsum amet, dolor
+2024-04-02 22:30:33 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 8410697436416176605, "id": 2917195621840595976, "text": "amet, Lorem  dolor amet, ipsum sit ipsum Lorem  Kafka Lorem  Lorem  dolor ipsum ipsum amet, dolor", "createdAt": 1712097033000}' to topic='twitter-topic'
+2024-04-02 22:30:33 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 65; Timestamp 1712097033129, at time 63979890939199
+2024-04-02 22:30:34 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  amet, sit ipsum dolor Java dolor amet, sit
+2024-04-02 22:30:34 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 3561012685402876938, "id": 1331220604213893331, "text": "Lorem  amet, sit ipsum dolor Java dolor amet, sit", "createdAt": 1712097034000}' to topic='twitter-topic'
+2024-04-02 22:30:34 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 66; Timestamp 1712097034132, at time 63980893283014
+2024-04-02 22:30:35 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum Lorem  sit Lorem  Lorem  amet, dolor Java dolor ipsum Lorem  ipsum dolor dolor
+2024-04-02 22:30:35 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 190456765160953770, "id": 6064661474755878400, "text": "ipsum Lorem  sit Lorem  Lorem  amet, dolor Java dolor ipsum Lorem  ipsum dolor dolor", "createdAt": 1712097035000}' to topic='twitter-topic'
+2024-04-02 22:30:35 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 88; Timestamp 1712097035134, at time 63981894739518
+2024-04-02 22:30:36 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum dolor dolor sit Lorem  ipsum Kafka Lorem  amet, amet, sit sit
+2024-04-02 22:30:36 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7774390472757680124, "id": 7756922856594434233, "text": "ipsum dolor dolor sit Lorem  ipsum Kafka Lorem  amet, amet, sit sit", "createdAt": 1712097036000}' to topic='twitter-topic'
+2024-04-02 22:30:36 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 66; Timestamp 1712097036136, at time 63982897246418
+2024-04-02 22:30:37 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum amet, Lorem  sit amet, Microservices sit Lorem  ipsum
+2024-04-02 22:30:37 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5305529066610062969, "id": 8800401056246146816, "text": "ipsum amet, Lorem  sit amet, Microservices sit Lorem  ipsum", "createdAt": 1712097037000}' to topic='twitter-topic'
+2024-04-02 22:30:37 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 89; Timestamp 1712097037138, at time 63983899468220
+2024-04-02 22:30:38 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit Lorem  Lorem  ipsum ipsum amet, Lorem  Kafka sit sit amet, amet, dolor
+2024-04-02 22:30:38 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 6846880273189442295, "id": 2306556300271211369, "text": "sit Lorem  Lorem  ipsum ipsum amet, Lorem  Kafka sit sit amet, amet, dolor", "createdAt": 1712097038000}' to topic='twitter-topic'
+2024-04-02 22:30:38 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 90; Timestamp 1712097038141, at time 63984902429718
+2024-04-02 22:30:39 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor ipsum Lorem  dolor sit Elasticsearch sit amet, Lorem
+2024-04-02 22:30:39 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 6967556685839854170, "id": 1772666757462534335, "text": "dolor ipsum Lorem  dolor sit Elasticsearch sit amet, Lorem", "createdAt": 1712097039000}' to topic='twitter-topic'
+2024-04-02 22:30:39 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 67; Timestamp 1712097039143, at time 63985904993719
+2024-04-02 22:30:40 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  sit dolor dolor dolor amet, dolor Spring Lorem  ipsum sit dolor amet, Lorem
+2024-04-02 22:30:40 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 4473413835978885161, "id": 7776094486502313149, "text": "Lorem  sit dolor dolor dolor amet, dolor Spring Lorem  ipsum sit dolor amet, Lorem", "createdAt": 1712097040000}' to topic='twitter-topic'
+2024-04-02 22:30:40 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 91; Timestamp 1712097040145, at time 63986907547818
+2024-04-02 22:30:41 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor dolor Lorem  sit Lorem  Kafka amet, amet, sit
+2024-04-02 22:30:41 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 6481638368358143981, "id": 5700409399272533870, "text": "dolor dolor Lorem  sit Lorem  Kafka amet, amet, sit", "createdAt": 1712097041000}' to topic='twitter-topic'
+2024-04-02 22:30:41 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 92; Timestamp 1712097041147, at time 63987908008626
+2024-04-02 22:30:42 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  sit sit sit Lorem  sit ipsum Java sit ipsum amet, Lorem  dolor dolor
+2024-04-02 22:30:42 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5954647545595152638, "id": 7238985486355057129, "text": "Lorem  sit sit sit Lorem  sit ipsum Java sit ipsum amet, Lorem  dolor dolor", "createdAt": 1712097042000}' to topic='twitter-topic'
+2024-04-02 22:30:42 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 67; Timestamp 1712097042149, at time 63988910756672
+2024-04-02 22:30:43 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit Lorem  amet, Lorem  dolor amet, ipsum Elasticsearch ipsum Lorem  sit ipsum sit
+2024-04-02 22:30:43 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 2396833978664013591, "id": 3402276365564994454, "text": "sit Lorem  amet, Lorem  dolor amet, ipsum Elasticsearch ipsum Lorem  sit ipsum sit", "createdAt": 1712097043000}' to topic='twitter-topic'
+2024-04-02 22:30:43 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 68; Timestamp 1712097043152, at time 63989913261291
+2024-04-02 22:30:44 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, amet, amet, dolor Lorem  Microservices dolor sit sit amet,
+2024-04-02 22:30:44 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 8197278168631725008, "id": 7557797461693083470, "text": "amet, amet, amet, dolor Lorem  Microservices dolor sit sit amet,", "createdAt": 1712097044000}' to topic='twitter-topic'
+2024-04-02 22:30:44 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 93; Timestamp 1712097044154, at time 63990915341514
+2024-04-02 22:30:45 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  sit ipsum dolor Microservices ipsum Lorem
+2024-04-02 22:30:45 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 8720265268687519337, "id": 3838152003931048513, "text": "Lorem  sit ipsum dolor Microservices ipsum Lorem", "createdAt": 1712097045000}' to topic='twitter-topic'
+2024-04-02 22:30:45 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 94; Timestamp 1712097045156, at time 63991918239630
+2024-04-02 22:30:46 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor dolor dolor Java sit amet,
+2024-04-02 22:30:46 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 1681887809097753214, "id": 8256277512877514749, "text": "dolor dolor dolor Java sit amet,", "createdAt": 1712097046000}' to topic='twitter-topic'
+2024-04-02 22:30:46 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 95; Timestamp 1712097046158, at time 63992921174346
+2024-04-02 22:30:47 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor amet, ipsum ipsum Lorem  Spring dolor Lorem  sit
+2024-04-02 22:30:47 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 8376900998947792060, "id": 666867714980940408, "text": "dolor amet, ipsum ipsum Lorem  Spring dolor Lorem  sit", "createdAt": 1712097047000}' to topic='twitter-topic'
+2024-04-02 22:30:47 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 68; Timestamp 1712097047160, at time 63993932782396
+2024-04-02 22:30:48 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  amet, amet, Lorem  ipsum dolor Java sit Lorem  sit dolor sit
+2024-04-02 22:30:48 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7934997525251378378, "id": 7412249929977730800, "text": "Lorem  amet, amet, Lorem  ipsum dolor Java sit Lorem  sit dolor sit", "createdAt": 1712097048000}' to topic='twitter-topic'
+2024-04-02 22:30:48 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 69; Timestamp 1712097048162, at time 63994929494260
+2024-04-02 22:30:49 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  amet, amet, Lorem  ipsum ipsum dolor Elasticsearch dolor Lorem  dolor dolor sit Lorem
+2024-04-02 22:30:49 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5233719443740494564, "id": 4256691541581925677, "text": "Lorem  amet, amet, Lorem  ipsum ipsum dolor Elasticsearch dolor Lorem  dolor dolor sit Lorem", "createdAt": 1712097049000}' to topic='twitter-topic'
+2024-04-02 22:30:49 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 69; Timestamp 1712097049165, at time 63995926212823
+2024-04-02 22:30:50 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum amet, ipsum ipsum sit Lorem  Lorem  Java Lorem  sit amet, Lorem  amet, sit
+2024-04-02 22:30:50 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 4868934926131363666, "id": 1852034582948804337, "text": "ipsum amet, ipsum ipsum sit Lorem  Lorem  Java Lorem  sit amet, Lorem  amet, sit", "createdAt": 1712097050000}' to topic='twitter-topic'
+2024-04-02 22:30:50 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 96; Timestamp 1712097050167, at time 63996932515815
+2024-04-02 22:30:51 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit ipsum sit ipsum dolor Kafka sit sit Lorem
+2024-04-02 22:30:51 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 3277141014307193186, "id": 60697528813847834, "text": "sit ipsum sit ipsum dolor Kafka sit sit Lorem", "createdAt": 1712097051000}' to topic='twitter-topic'
+2024-04-02 22:30:51 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 70; Timestamp 1712097051169, at time 63997930545518
+2024-04-02 22:30:52 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit amet, amet, Kafka sit dolor
+2024-04-02 22:30:52 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 6871680298690828829, "id": 8348890177771703791, "text": "sit amet, amet, Kafka sit dolor", "createdAt": 1712097052000}' to topic='twitter-topic'
+2024-04-02 22:30:52 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 71; Timestamp 1712097052171, at time 63998932475314
+2024-04-02 22:30:53 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit dolor sit dolor ipsum Java sit Lorem  amet, ipsum
+2024-04-02 22:30:53 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 2146063097242744997, "id": 3620928077913861037, "text": "sit dolor sit dolor ipsum Java sit Lorem  amet, ipsum", "createdAt": 1712097053000}' to topic='twitter-topic'
+2024-04-02 22:30:53 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 70; Timestamp 1712097053173, at time 63999941045496
+2024-04-02 22:30:54 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit amet, amet, amet, amet, dolor Java ipsum amet, sit dolor ipsum
+2024-04-02 22:30:54 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 6940976827595743668, "id": 197166875675019356, "text": "sit amet, amet, amet, amet, dolor Java ipsum amet, sit dolor ipsum", "createdAt": 1712097054000}' to topic='twitter-topic'
+2024-04-02 22:30:54 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 72; Timestamp 1712097054175, at time 64000939548898
+2024-04-02 22:30:55 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, sit ipsum Lorem  Lorem  Java dolor ipsum ipsum
+2024-04-02 22:30:55 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7597502030646911889, "id": 4536432879228024643, "text": "amet, sit ipsum Lorem  Lorem  Java dolor ipsum ipsum", "createdAt": 1712097055000}' to topic='twitter-topic'
+2024-04-02 22:30:55 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 73; Timestamp 1712097055180, at time 64001944142289
+2024-04-02 22:30:56 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit amet, dolor Lorem  amet, dolor ipsum Microservices amet, amet, amet, Lorem  amet, ipsum
+2024-04-02 22:30:56 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 622630177250730745, "id": 3496563906764241587, "text": "sit amet, dolor Lorem  amet, dolor ipsum Microservices amet, amet, amet, Lorem  amet, ipsum", "createdAt": 1712097056000}' to topic='twitter-topic'
+2024-04-02 22:30:56 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 74; Timestamp 1712097056183, at time 64002945704885
+2024-04-02 22:30:57 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  Lorem  ipsum sit dolor ipsum Java sit dolor amet, ipsum
+2024-04-02 22:30:57 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 2973777252968935352, "id": 6099318483822713971, "text": "Lorem  Lorem  ipsum sit dolor ipsum Java sit dolor amet, ipsum", "createdAt": 1712097057000}' to topic='twitter-topic'
+2024-04-02 22:30:57 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 97; Timestamp 1712097057186, at time 64003948175380
+2024-04-02 22:30:58 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor ipsum dolor dolor amet, amet, Lorem  amet, Microservices Lorem  dolor Lorem  amet, amet, Lorem  ipsum
+2024-04-02 22:30:58 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 6276127078296578790, "id": 959386649912311138, "text": "dolor ipsum dolor dolor amet, amet, Lorem  amet, Microservices Lorem  dolor Lorem  amet, amet, Lorem  ipsum", "createdAt": 1712097058000}' to topic='twitter-topic'
+2024-04-02 22:30:58 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 71; Timestamp 1712097058188, at time 64004951480932
+2024-04-02 22:30:59 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum sit sit dolor amet, sit dolor amet, Kafka ipsum sit sit amet, ipsum Lorem
+2024-04-02 22:30:59 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 8530920788440063235, "id": 5554498760012497876, "text": "ipsum sit sit dolor amet, sit dolor amet, Kafka ipsum sit sit amet, ipsum Lorem", "createdAt": 1712097059000}' to topic='twitter-topic'
+2024-04-02 22:30:59 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 98; Timestamp 1712097059190, at time 64005951085219
+2024-04-02 22:31:00 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor sit amet, amet, amet, amet, dolor amet, Microservices dolor dolor Lorem  sit dolor ipsum Lorem
+2024-04-02 22:31:00 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 1114381049861508082, "id": 3970190320432787574, "text": "dolor sit amet, amet, amet, amet, dolor amet, Microservices dolor dolor Lorem  sit dolor ipsum Lorem", "createdAt": 1712097060000}' to topic='twitter-topic'
+2024-04-02 22:31:00 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 99; Timestamp 1712097060192, at time 64006954648089
+2024-04-02 22:31:01 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, ipsum dolor Microservices sit sit
+2024-04-02 22:31:01 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5209476586828917656, "id": 8495707059128162155, "text": "amet, ipsum dolor Microservices sit sit", "createdAt": 1712097061000}' to topic='twitter-topic'
+2024-04-02 22:31:01 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 75; Timestamp 1712097061195, at time 64007956165813
+2024-04-02 22:31:02 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor Lorem  ipsum Elasticsearch ipsum amet,
+2024-04-02 22:31:02 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 6700590613145451271, "id": 4327755564271826818, "text": "dolor Lorem  ipsum Elasticsearch ipsum amet,", "createdAt": 1712097062000}' to topic='twitter-topic'
+2024-04-02 22:31:02 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 100; Timestamp 1712097062197, at time 64008958519268
+2024-04-02 22:31:03 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum Lorem  ipsum Lorem  amet, ipsum sit dolor Spring amet, ipsum sit amet, dolor dolor ipsum
+2024-04-02 22:31:03 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 1172627521102908162, "id": 6975774468046956885, "text": "ipsum Lorem  ipsum Lorem  amet, ipsum sit dolor Spring amet, ipsum sit amet, dolor dolor ipsum", "createdAt": 1712097063000}' to topic='twitter-topic'
+2024-04-02 22:31:03 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 72; Timestamp 1712097063199, at time 64009959894020
+2024-04-02 22:31:04 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor sit dolor ipsum amet, amet, Kafka sit ipsum ipsum dolor dolor
+2024-04-02 22:31:04 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 3845645570049807204, "id": 2634337494936655197, "text": "dolor sit dolor ipsum amet, amet, Kafka sit ipsum ipsum dolor dolor", "createdAt": 1712097064000}' to topic='twitter-topic'
+2024-04-02 22:31:04 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 76; Timestamp 1712097064201, at time 64010962379476
+2024-04-02 22:31:05 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit amet, dolor dolor sit sit Microservices dolor sit Lorem  amet,
+2024-04-02 22:31:05 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7965959519175552577, "id": 7045094021061070307, "text": "sit amet, dolor dolor sit sit Microservices dolor sit Lorem  amet,", "createdAt": 1712097065000}' to topic='twitter-topic'
+2024-04-02 22:31:05 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 73; Timestamp 1712097065203, at time 64011964544931
+2024-04-02 22:31:06 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, dolor ipsum amet, dolor sit sit dolor Kafka Lorem  sit amet, sit sit amet,
+2024-04-02 22:31:06 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 2270037440699262523, "id": 8261340362057365541, "text": "amet, dolor ipsum amet, dolor sit sit dolor Kafka Lorem  sit amet, sit sit amet,", "createdAt": 1712097066000}' to topic='twitter-topic'
+2024-04-02 22:31:06 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 77; Timestamp 1712097066206, at time 64012967297446
+2024-04-02 22:31:07 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum Lorem  sit ipsum Kafka Lorem  dolor
+2024-04-02 22:31:07 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 2070971398797085899, "id": 2621997643889042870, "text": "ipsum Lorem  sit ipsum Kafka Lorem  dolor", "createdAt": 1712097067000}' to topic='twitter-topic'
+2024-04-02 22:31:07 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 78; Timestamp 1712097067208, at time 64013970213993
+2024-04-02 22:31:08 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit ipsum dolor Elasticsearch sit amet,
+2024-04-02 22:31:08 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 596448374106697103, "id": 4913727756860003596, "text": "sit ipsum dolor Elasticsearch sit amet,", "createdAt": 1712097068000}' to topic='twitter-topic'
+2024-04-02 22:31:08 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 74; Timestamp 1712097068210, at time 64014972470914
+2024-04-02 22:31:09 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor amet, Lorem  amet, Elasticsearch dolor amet,
+2024-04-02 22:31:09 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 4142458688070406184, "id": 4718045090719438123, "text": "dolor amet, Lorem  amet, Elasticsearch dolor amet,", "createdAt": 1712097069000}' to topic='twitter-topic'
+2024-04-02 22:31:09 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 79; Timestamp 1712097069213, at time 64015975134651
+2024-04-02 22:31:10 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, dolor ipsum sit Lorem  Microservices ipsum dolor Lorem  dolor
+2024-04-02 22:31:10 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5981337231700955925, "id": 7437407960934854386, "text": "amet, dolor ipsum sit Lorem  Microservices ipsum dolor Lorem  dolor", "createdAt": 1712097070000}' to topic='twitter-topic'
+2024-04-02 22:31:10 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 101; Timestamp 1712097070214, at time 64016977744185
+2024-04-02 22:31:11 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  dolor sit Microservices dolor sit
+2024-04-02 22:31:11 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 6674545654364627111, "id": 8165607913351895585, "text": "Lorem  dolor sit Microservices dolor sit", "createdAt": 1712097071000}' to topic='twitter-topic'
+2024-04-02 22:31:11 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 80; Timestamp 1712097071216, at time 64017980129911
+2024-04-02 22:31:12 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit amet, sit Kafka sit dolor
+2024-04-02 22:31:12 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 7429345464522012119, "id": 7831851020332050707, "text": "sit amet, sit Kafka sit dolor", "createdAt": 1712097072000}' to topic='twitter-topic'
+2024-04-02 22:31:12 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 75; Timestamp 1712097072217, at time 64018983019544
+2024-04-02 22:31:13 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  sit ipsum dolor dolor Java dolor dolor amet,
+2024-04-02 22:31:13 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 2175198488119889724, "id": 1610776068899824874, "text": "Lorem  sit ipsum dolor dolor Java dolor dolor amet,", "createdAt": 1712097073000}' to topic='twitter-topic'
+2024-04-02 22:31:13 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 81; Timestamp 1712097073219, at time 64019981743380
+2024-04-02 22:31:14 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  sit amet, dolor amet, Elasticsearch ipsum sit dolor amet,
+2024-04-02 22:31:14 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 8649778583484148186, "id": 8653706896679102970, "text": "Lorem  sit amet, dolor amet, Elasticsearch ipsum sit dolor amet,", "createdAt": 1712097074000}' to topic='twitter-topic'
+2024-04-02 22:31:14 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 76; Timestamp 1712097074221, at time 64020988303572
+2024-04-02 22:31:15 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor dolor dolor dolor Kafka dolor dolor
+2024-04-02 22:31:15 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5109318139745838824, "id": 5795664709234458281, "text": "dolor dolor dolor dolor Kafka dolor dolor", "createdAt": 1712097075000}' to topic='twitter-topic'
+2024-04-02 22:31:15 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 77; Timestamp 1712097075224, at time 64021992378505
+2024-04-02 22:31:16 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor sit sit sit amet, Lorem  dolor Spring Lorem  sit ipsum sit sit
+2024-04-02 22:31:16 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 4463218743079975558, "id": 4612600335762272200, "text": "dolor sit sit sit amet, Lorem  dolor Spring Lorem  sit ipsum sit sit", "createdAt": 1712097076000}' to topic='twitter-topic'
+2024-04-02 22:31:16 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 102; Timestamp 1712097076226, at time 64022997647555
+2024-04-02 22:31:17 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor dolor Lorem  Lorem  ipsum Lorem  Spring dolor dolor dolor ipsum Lorem
+2024-04-02 22:31:17 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 2835991381289897123, "id": 4154695763374167667, "text": "dolor dolor Lorem  Lorem  ipsum Lorem  Spring dolor dolor dolor ipsum Lorem", "createdAt": 1712097077000}' to topic='twitter-topic'
+2024-04-02 22:31:17 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 78; Timestamp 1712097077229, at time 64024009465590
+2024-04-02 22:31:18 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, dolor amet, Lorem  ipsum Lorem  amet, ipsum Spring ipsum Lorem  ipsum Lorem  amet, dolor
+2024-04-02 22:31:18 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 8932001023819376269, "id": 5450590548954022808, "text": "amet, dolor amet, Lorem  ipsum Lorem  amet, ipsum Spring ipsum Lorem  ipsum Lorem  amet, dolor", "createdAt": 1712097078000}' to topic='twitter-topic'
+2024-04-02 22:31:18 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 103; Timestamp 1712097078231, at time 64024995018882
+2024-04-02 22:31:19 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text ipsum Lorem  sit Lorem  amet, sit Microservices Lorem  sit sit Lorem  Lorem
+2024-04-02 22:31:19 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 6696397694707527515, "id": 3022068630543097816, "text": "ipsum Lorem  sit Lorem  amet, sit Microservices Lorem  sit sit Lorem  Lorem", "createdAt": 1712097079000}' to topic='twitter-topic'
+2024-04-02 22:31:19 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 79; Timestamp 1712097079235, at time 64025998297305
+2024-04-02 22:31:20 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor Lorem  sit dolor ipsum ipsum Kafka sit ipsum sit dolor Lorem
+2024-04-02 22:31:20 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 3687666428767104236, "id": 5099661724565727373, "text": "dolor Lorem  sit dolor ipsum ipsum Kafka sit ipsum sit dolor Lorem", "createdAt": 1712097080000}' to topic='twitter-topic'
+2024-04-02 22:31:20 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 82; Timestamp 1712097080236, at time 64026999308299
+2024-04-02 22:31:21 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text dolor Lorem  ipsum ipsum Lorem  Elasticsearch Lorem  ipsum amet,
+2024-04-02 22:31:21 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 9103426779325723974, "id": 5392284366953257203, "text": "dolor Lorem  ipsum ipsum Lorem  Elasticsearch Lorem  ipsum amet,", "createdAt": 1712097081000}' to topic='twitter-topic'
+2024-04-02 22:31:21 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 83; Timestamp 1712097081238, at time 64028000178591
+2024-04-02 22:31:22 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text amet, dolor ipsum Lorem  sit amet, Elasticsearch ipsum dolor Lorem  Lorem
+2024-04-02 22:31:22 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 3619199600705175625, "id": 890259369218939267, "text": "amet, dolor ipsum Lorem  sit amet, Elasticsearch ipsum dolor Lorem  Lorem", "createdAt": 1712097082000}' to topic='twitter-topic'
+2024-04-02 22:31:22 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 104; Timestamp 1712097082240, at time 64029002748908
+2024-04-02 22:31:23 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  amet, Lorem  dolor amet, sit amet, Elasticsearch Lorem  ipsum dolor dolor sit
+2024-04-02 22:31:23 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5243769084626989862, "id": 6235797617890781270, "text": "Lorem  amet, Lorem  dolor amet, sit amet, Elasticsearch Lorem  ipsum dolor dolor sit", "createdAt": 1712097083000}' to topic='twitter-topic'
+2024-04-02 22:31:23 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 1; Offset 84; Timestamp 1712097083247, at time 64030021178725
+2024-04-02 22:31:24 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  dolor Lorem  ipsum ipsum ipsum Microservices ipsum dolor amet, amet, ipsum
+2024-04-02 22:31:24 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 8967761172846353403, "id": 543290522313682580, "text": "Lorem  dolor Lorem  ipsum ipsum ipsum Microservices ipsum dolor amet, amet, ipsum", "createdAt": 1712097084000}' to topic='twitter-topic'
+2024-04-02 22:31:24 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 0; Offset 80; Timestamp 1712097084252, at time 64031021731330
+2024-04-02 22:31:25 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text sit sit dolor amet, dolor ipsum Microservices sit dolor sit ipsum
+2024-04-02 22:31:25 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 103341869466817999, "id": 3666416898119061766, "text": "sit sit dolor amet, dolor ipsum Microservices sit dolor sit ipsum", "createdAt": 1712097085000}' to topic='twitter-topic'
+2024-04-02 22:31:25 [kafka-producer-network-thread | producer-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Received new metadata. Topic: twitter-topic; Partition 2; Offset 105; Timestamp 1712097085262, at time 64032051339480
+2024-04-02 22:31:26 [kafka-producer-network-thread | producer-1] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-1] Node 2 disconnected.
+2024-04-02 22:31:26 [SpringApplicationShutdownHook] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2024-04-02 22:31:26 [pool-4-thread-1] INFO  c.j.m.t.l.TwitterKafkaStatusListener - Twitter status with text Lorem  sit ipsum dolor ipsum dolor amet, Kafka sit amet, Lorem  amet, sit amet,
+2024-04-02 22:31:26 [pool-4-thread-1] INFO  c.j.m.k.p.s.i.TwitterKafkaProducer - Sending message='{"userId": 5264526082173522232, "id": 2057744990724231634, "text": "Lorem  sit ipsum dolor ipsum dolor amet, Kafka sit amet, Lorem  amet, sit amet,", "createdAt": 1712097086000}' to topic='twitter-topic'
+2024-04-02 22:31:26 [pool-4-thread-1] INFO  o.a.k.c.producer.ProducerConfig - ProducerConfig values: 
+	acks = -1
+	auto.include.jmx.reporter = true
+	batch.size = 1638400
+	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-2
+	compression.type = snappy
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.LongSerializer
+	linger.ms = 5
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 60000
+	retries = 5
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class io.confluent.kafka.serializers.KafkaAvroSerializer
+
+2024-04-02 22:31:26 [pool-4-thread-1] INFO  i.c.k.s.KafkaAvroSerializerConfig - KafkaAvroSerializerConfig values: 
+	bearer.auth.token = [hidden]
+	schema.registry.url = [http://schema-registry:8081]
+	basic.auth.user.info = [hidden]
+	auto.register.schemas = true
+	max.schemas.per.subject = 1000
+	basic.auth.credentials.source = URL
+	schema.registry.basic.auth.user.info = [hidden]
+	bearer.auth.credentials.source = STATIC_TOKEN
+	value.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+	key.subject.name.strategy = class io.confluent.kafka.serializers.subject.TopicNameStrategy
+
+2024-04-02 22:31:26 [pool-4-thread-1] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-2] Instantiated an idempotent producer.
+2024-04-02 22:31:26 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.6.1
+2024-04-02 22:31:26 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 5e3c2b738d253ff5
+2024-04-02 22:31:26 [pool-4-thread-1] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1712097086390
+2024-04-02 22:31:26 [kafka-producer-network-thread | producer-2] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-2] Node -2 disconnected.
+2024-04-02 22:31:26 [kafka-producer-network-thread | producer-2] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-2] Connection to node -2 (kafka-broker-2/172.21.0.6:9092) could not be established. Broker may not be available.
+2024-04-02 22:31:26 [kafka-producer-network-thread | producer-2] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-2] Bootstrap broker kafka-broker-2:9092 (id: -2 rack: null) disconnected
+2024-04-02 22:31:26 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2024-04-02 22:31:26 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-04-02 22:31:26 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2024-04-02 22:31:26 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-1 unregistered
+2024-04-02 22:31:26 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2024-04-02 22:31:26 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2024-04-02 22:31:26 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-04-02 22:31:26 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2024-04-02 22:31:26 [SpringApplicationShutdownHook] INFO  o.a.k.clients.producer.KafkaProducer - [Producer clientId=producer-2] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2024-04-02 22:31:26 [kafka-producer-network-thread | producer-2] INFO  o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-2] Node -1 disconnected.
+2024-04-02 22:31:26 [kafka-producer-network-thread | producer-2] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-2] Connection to node -1 (kafka-broker-1/172.21.0.3:9092) could not be established. Broker may not be available.
+2024-04-02 22:31:26 [kafka-producer-network-thread | producer-2] WARN  o.apache.kafka.clients.NetworkClient - [Producer clientId=producer-2] Bootstrap broker kafka-broker-1:9092 (id: -1 rack: null) disconnected
+2024-04-02 22:31:26 [kafka-producer-network-thread | producer-2] INFO  org.apache.kafka.clients.Metadata - [Producer clientId=producer-2] Cluster ID: N12cirbeTD-soLVEQtE1yA
+2024-04-02 22:31:26 [kafka-producer-network-thread | producer-2] INFO  o.a.k.c.p.i.TransactionManager - [Producer clientId=producer-2] ProducerId set to 14001 with epoch 0
+2024-04-02 22:31:26 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2024-04-02 22:31:26 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2024-04-02 22:31:26 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2024-04-02 22:31:26 [SpringApplicationShutdownHook] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.producer for producer-2 unregistered
