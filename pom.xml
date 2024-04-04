@@ -19,6 +19,7 @@
 		<module>kafka</module>
 		<module>common-config</module>
 		<module>config-server</module>
+		<module>playground</module>
 	</modules>
 	<packaging>pom</packaging>
 
@@ -36,6 +37,7 @@
 		<kafka-avro-serializer.version>5.3.0</kafka-avro-serializer.version>
 		<spring-cloud.version>4.1.1</spring-cloud.version>
 		<spring-cloud-dependencies.version>2023.0.1</spring-cloud-dependencies.version>
+		<jasypt-spring-boot-starter.version>3.0.5</jasypt-spring-boot-starter.version>
 	</properties>
 
 	<dependencyManagement>
@@ -180,6 +182,12 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-security</artifactId>
 				<version>${spring-boot.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.github.ulisesbocchio</groupId>
+				<artifactId>jasypt-spring-boot-starter</artifactId>
+				<version>${jasypt-spring-boot-starter.version}</version>
 			</dependency>
 
 

@@ -15,10 +15,17 @@ spring:
         git:
           uri: https://github.com/jlujan2/config-server
           username: jlujan2
-          password: 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
+          password: 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
           clone-on-start: true
       fail-fast: true
-    security:
-      user:
-        name: spring_cloud_user
-        password: springCloud_Pwd!
+  security:
+    user:
+      name: spring_cloud_user
+      password: '{cipher}d254515af89c48cf543e1fdfc2d079cd70f9254f6f4352f60b87e37230f4fad91eb780ea0f0cc833c61f82c58a673494'
+
+jasypt:
+  encryptor:
+    password: Demo_Pwd_2024
+
+encrypt:
+  key: 'Demo_Pwd_2024'
