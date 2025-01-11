@@ -4,6 +4,7 @@ import com.juank.microservices.config_server.TwitterToKafkaServiceConfigData;
 import com.juank.microservices.twitter_to_kafka.exception.TwitterToKafkaServiceException;
 import com.juank.microservices.twitter_to_kafka.listener.TwitterKafkaStatusListener;
 import com.juank.microservices.twitter_to_kafka.runner.StreamRunner;
+import java.security.SecureRandom;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
@@ -32,7 +33,7 @@ public class MockKafkaStreamRunner implements StreamRunner {
 
     private final TwitterKafkaStatusListener twitterKafkaStatusListener;
 
-    private static final Random RANDOM = new Random();
+    private static final Random RANDOM = new SecureRandom();
 
     private static final String [] WORDS = new String[] {
             "Lorem ",
